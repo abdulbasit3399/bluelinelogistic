@@ -1,0 +1,92 @@
+.btn {
+  padding: 0.6rem 2.5rem;
+  font-size: 1.7rem;
+  color: $gray-2;
+  text-decoration: none;
+  font-weight: 400;
+  transition: background-color $effect, color $effect, border-color $effect, box-shadow $effect;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  &.btn-lg {
+    padding: 0.6rem 2.8rem;
+    font-size: calc(1.6rem * 1.1);
+  }
+  &.btn-primary {
+    background-color: $primary !important;
+    border-color: $primary-hov !important;
+    color: $white !important;
+    &:hover,
+    &:focus {
+      background-color: $primary-hov !important;
+    }
+  }
+  &.btn-link {
+    background-color: transparent;
+    color: $primary !important;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $primary-hov !important;
+    }
+  }
+}
+
+.text {
+  &-lg {
+    font-size: calc(var(--base-fs) * 1.1);
+  }
+  &-sm {
+    font-size: calc(var(--base-fs) * 0.8);
+  }
+
+  &-muted {
+    color: $gray-6 !important;
+  }
+  &-black {
+    color: $black !important;
+  }
+  &-primary {
+    color: $primary !important;
+    &-hov {
+      color: $primary-hov !important;
+    }
+  }
+}
+
+a,
+a.link,
+.link {
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color $effect;
+  display: inline-block;
+
+  &.w-icon {
+    padding-inline-end: 2rem;
+    background: url(../images/icon-arrow-right.svg) no-repeat 100% 50%;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-hov;
+  }
+}
+
+.form {
+  &-control {
+    min-height: 48px;
+    font-size: var(--base-fs);
+    padding: 0.8rem 1.6rem;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.32rem rgba($primary, 0.25);
+    }
+  }
+}

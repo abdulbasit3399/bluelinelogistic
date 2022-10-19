@@ -1,0 +1,19 @@
+.card-permissions .card-header {
+  align-items: center;
+  min-height: 50px;
+}
+.card-permissions .card-header .group-name {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.card-permissions .view-permissions .permission-checkbox .form-check .form-check-input {
+  width: 2.5rem;
+  height: 1.35rem;
+}
+.card-permissions .view-permissions .permission-checkbox label {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=acl.css.map*/

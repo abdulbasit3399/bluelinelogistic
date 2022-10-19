@@ -1,0 +1,127 @@
+@font-face{
+    font-family:quest;
+    font-style:normal;
+    font-display:swap;
+    src:url(../fonts/Questv1-Bold.otf) format('truetype');
+    font-weight:500
+}
+body, a, h1, h2, h3, h4, h5, h6, input, button, select, .media-body, .text, tspan, textarea, text, .btn, input, textarea, li, p, label, .ps-widget--worktime p strong, .tp-caption, .widget-title, .jq-toast-single {
+    font-family: 'quest', sans-serif !important;
+    letter-spacing: 0 !important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'quest', sans-serif !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'quest', sans-serif !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'quest', sans-serif !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'quest', sans-serif !important;
+}
+
+/***************************************/
+body{
+    direction: rtl;
+    text-align: right;
+}
+.login-page{
+    direction: ltr;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    float: right;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left !important;
+}
+.sidebar-collapse .main-sidebar, .sidebar-collapse .main-sidebar::before {
+    margin-left: 0px;
+    margin-right: -250px;
+}
+.ml-auto, .mx-auto {
+    margin-left: unset!important;
+    margin-right: auto!important;
+}
+.brand-link .brand-image {
+    float: right;
+    margin-right: .8rem;
+    margin-left: .5rem;
+}
+.nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right {
+    right: auto;
+    left: 1rem;
+}
+.float-sm-right {
+    float: left!important;
+}
+@media (min-width: 992px) {
+    .sidebar-mini.sidebar-collapse .main-sidebar, .sidebar-mini.sidebar-collapse .main-sidebar::before {
+        margin-right: 0;
+    }
+    .sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header {
+        margin-right: 4.6rem!important;
+        margin-left: 0 !important;
+    }
+}
+
+@media (min-width: 768px){
+    body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
+        margin-left: 0;
+        margin-right: 250px;
+    }
+}
+
+.card-title {
+    float: right;
+}
+table.dataTable>thead .sorting:before, table.dataTable>thead .sorting_asc:before, table.dataTable>thead .sorting_desc:before, table.dataTable>thead .sorting_asc_disabled:before, table.dataTable>thead .sorting_desc_disabled:before {
+    left: 1em !important;
+    right: auto !important;
+}
+table.dataTable>thead .sorting:after, table.dataTable>thead .sorting_asc:after, table.dataTable>thead .sorting_desc:after, table.dataTable>thead .sorting_asc_disabled:after, table.dataTable>thead .sorting_desc_disabled:after {
+    right: auto !important;
+    left: .5em !important;
+}
+.dropdown-item {
+    text-align: right;
+}
+.std-block,.std-bottom,.std-info,.std-photo {
+    float: right !important;
+}
+.std-photo img {
+    margin: 0px 5px 20px 11px;
+}
+.form-check-label {
+    margin-right: 18px;
+}
+.input-group:not(.has-validation)>.form-control:not(:last-child) {
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group-text{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.modal-header .close, .modal-header .mailbox-attachment-close {
+    padding: 1rem;
+    margin: -1rem auto -1rem -1rem;
+}
+.layout-fixed .main-sidebar {
+    right: 0 !important;
+}
+.small-box .icon > i {
+    font-size: 90px;
+    position: absolute;
+    left: 15px !important;
+    top: 15px;
+    transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.nav {
+    padding-right: 0;
+}

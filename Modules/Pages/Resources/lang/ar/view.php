@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'pages' => 'الصفحات',
+    'page_list' => 'قائمة الصفحات',
+    'create_new_page' => 'إنشاء صفحة جديدة',
+    'edit_page' => 'تعديل الصفحة',
+    'add_page' => 'إضافة صفحة',
+    'selected_pages' => 'الصفحات المختارة',
+    'select_pages' => 'حدد الصفحات',
+    'view_page' => 'عرض الصفحة',
+
+    'pages_table' => [
+        'page' => 'صفحة',
+        'id' => 'الرقم التعريفي ',
+        'creator' => 'إنشاء بواسطة',
+        'title' => 'عنوان',
+        'slug' => 'عنوان الرابط',
+        'content' => 'محتوى',
+        'image' => 'صورة مميزة',
+        'page_content' => 'ضع هنا محتوى صفحتك',
+        'published' => 'نشرت',
+        'active' => 'مفعل',
+        'visibility' => 'الرؤية',
+        'public' => 'عامة',
+        'auth_user' => 'مستخدم أمن',
+        'publish_on' => 'انشر على',
+        'seo_title' => 'عنوان SEO',
+        'seo_description' => 'وصف SEO',
+        'seo' => 'SEO',
+        'page_content_section' => 'محتوى الصفحة',
+        'comments_count' => 'عدد التعليقات',
+        'choose_page' => 'اختر الصفحة',
+    ],
+];

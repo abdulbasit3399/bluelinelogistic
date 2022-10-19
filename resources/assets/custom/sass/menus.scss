@@ -1,0 +1,86 @@
+
+#hwpwrap {
+    .spinner {
+        background: none;
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin: 3px 0 0 8px;
+    }
+    a.btn {
+        color: #3f4254 !important;
+        &:not(.btn-secondary) {
+            color: #FFF !important;
+        }
+    }
+}
+.card-menus {
+
+
+    .accordion-section-title {
+        border: 0 !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &::after {
+            content: '' !important;
+        }
+        .text {
+            flex-basis: 80%;
+        }
+        .icon {
+            text-align: right;
+            flex-basis: 20%;
+        }
+    }
+
+    #post-body-content {
+        min-width: auto !important; 
+    }
+
+    #nav-menu-header {
+        border: none !important;
+    }
+    
+    
+    .card-menu-content {
+        #post-body {
+            border: none !important;
+            .menu-item {
+                .menu-item-handle {
+                    cursor: move;
+                    width: 400px !important;
+                }
+                .menu-item-settings {
+                    width: 400px !important;
+                }
+                .item-controls {
+                    .item-edit {
+                        &::before {
+                            content: "" !important;
+                            font: inherit;
+                            height: 100%;
+                            line-height: 45px;
+                        }
+                    }
+                }
+                .btn-action-item {
+                    padding: 5px 10px;
+                }
+            }
+            .nav-menus-php .menu-item-edit-active .item-edit {
+                &::before {
+                    content: '' !important;
+                }
+            }
+        }
+
+
+        .card-footer {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+}

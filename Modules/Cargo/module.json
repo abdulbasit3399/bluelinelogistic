@@ -1,0 +1,13 @@
+{
+    "name": "Cargo",
+    "alias": "cargo",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Cargo\\Providers\\CargoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

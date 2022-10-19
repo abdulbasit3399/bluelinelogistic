@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'setting' =>'Ambientazione',
+    'module_setting' => ':impostazione modulo',
+    'setting_modules' => 'Impostazione moduli',
+    'module_name' => 'Nome modulo',
+    'item' => 'Elemento',
+    'add_new_item' => 'Aggiungi un nuovo elemento',
+    'manage_setting_module' => 'Gestisci modulo impostazioni',
+    'ungroup' => 'Separa',
+    'theme_setting' => 'Impostazione del tema',
+    'no_theme_setting' => "Impostazione tema non trovata",
+    'add_section' => 'Aggiungi sezione',
+    'add_widget' => 'Aggiungi widget',
+    'widget' => 'Aggeggio',
+    'add_container' => 'Aggiungi contenitore',
+    'container' => 'Contenitore',
+    'container_setting' => 'Impostazione del contenitore',
+    'container_sections' => 'Sezioni contenitore',
+    'container_width' => 'Larghezza contenitore',
+    'display_container' => 'Contenitore di visualizzazione',
+    'container_sticky' => 'Contenitore appiccicoso',
+    'remove_container' => 'Rimuovi contenitore',
+    'no_sections' => 'Nessuna sezione',
+    'msg_theme_setting_updated' => "L'impostazione del tema è stata aggiornata correttamente.",
+
+
+    'remove_section' => 'Rimuovi sezione',
+    'duplicate' => 'Duplicare',
+    'move_up' => 'Andare avanti',
+    'move_down' => 'Abbassati',
+    'to_top' => 'In cima',
+    'to_bottom' => 'A fondo',
+];

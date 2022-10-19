@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    'home' => 'الرائيسية',
+    'you' => 'انت',
+    'tags' => 'العلامات ',
+    'share' => 'مشاركه',
+    'pervious_article' => 'مقالة سابقة',
+    'next_article' => 'المقال التالي',
+    'related_article' => 'مقالات ذات صلة',
+    'comments' => 'تعليقات',
+    'view_prev_comments' => 'عرض التعليقات السابقة',
+    'view_prev_replies' => 'عرض الردود السابقة',
+    'waiting_for_approval' => 'بانتظار الموافقة',
+    'reply' => 'رد',
+    'reply_to' => 'الرد على',
+    'leave_reply' => 'اترك رد',
+    'cancel_reply' => 'إلغاء الرد',
+    'msg_email_published' => 'لن يتم نشر عنوان بريدك الإلكتروني.',
+    'fields_are_marked' => 'الحقول المطلوبة محددة',
+    'msg_save_author_data' => 'احفظ اسمي ، بريدي الإلكتروني ، والموقع الإلكتروني في هذا المتصفح لاستخدامها المرة المقبلة في تعليقي.',
+    'field_comment' => 'تعليق',
+    'field_name' => 'اسم',
+    'field_email' => 'بريد الالكتروني',
+    'field_website' => 'موقع إلكتروني',
+    'post_comment' => 'أضف تعليقا',
+    'new' => 'جديد',
+    'articles' => 'مقالات',
+    'said' => 'قال',
+];

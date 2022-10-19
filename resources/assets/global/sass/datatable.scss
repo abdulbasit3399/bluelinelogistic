@@ -1,0 +1,45 @@
+
+// actions
+.btn-action-table {
+    width: 31px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 !important;
+    padding-left: 2px !important;
+    margin: 2px;
+}
+
+
+// default buttons
+.dt-buttons {
+    .buttons-page-length {
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px;
+    }
+
+    // hide buttons export
+
+    .buttons-excel, .buttons-print, .buttons-pdf, .buttons-csv {
+        display: none;
+        height: 0;
+        width: 0;
+        padding: 0;
+        z-index: -10;
+        opacity: 0;
+    }
+}
+
+
+.buttons-export-table {
+    .dropdown-menu {
+        .btn-export {
+            text-transform: capitalize;
+            padding: {
+                top: 8px;
+                bottom: 8px;
+            };
+        }
+    }
+}

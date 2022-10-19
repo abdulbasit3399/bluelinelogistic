@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    "home" =>"Casa",
+    "you" => "Voi",
+    "tags" => "Tag",
+    "share" => "Condividere",
+    "pervious_article" => "Articolo precedente",
+    "next_article" => "Prossimo articolo",
+    "related_article" => "Articoli Correlati",
+    "comments" => "Commenti",
+    "view_prev_comments" => "Visualizza commenti precedenti",
+    "view_prev_replies" => "Visualizza le risposte precedenti",
+    "waiting_for_approval" => "In attesa di approvazione",
+    "reply" => "Rispondere",
+    "reply_to" => "Rispondi a",
+    "leave_reply" => "Lascia un commento",
+    "cancel_reply" => "Cancella risposta",
+    "msg_email_published" => "L'indirizzo email non verrà pubblicato.",
+    "fields_are_marked" => "I campi richiesti sono contrassegnati",
+    "msg_save_author_data" => "Salva il mio nome, e-mail e sito Web in questo browser per la prossima volta che commento.",
+    "field_comment" => "Commento",
+    "field_name" => "Nome",
+    "field_email" => "E-mail",
+    "field_website" => "Sito web",
+    "post_comment" => "Posta un commento",
+    "new" => "Nuovo",
+    "articles" => "Articoli",
+    "said" => "disse",
+];

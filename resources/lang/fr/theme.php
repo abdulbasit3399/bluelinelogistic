@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'setting' =>'Ayar',
+    'module_setting' => ':modül ayarı',
+    'setting_modules' => 'Ayar modülleri',
+    'module_name' => 'Modül Adı',
+    'item' => 'Öğe',
+    'add_new_item' => 'Yeni öğe ekle',
+    'manage_setting_module' => 'Ayar modülünü yönet',
+    'ungroup' => 'Grubu çöz',
+    'theme_setting' => 'Tema ayarı',
+    'no_theme_setting' => 'Tema ayarı bulunamadı',
+    'add_section' => 'Bölüm Ekle',
+    'add_widget' => 'Wdget Ekle',
+    'widget' => 'Araç',
+    'add_container' => 'Konteyner Ekle',
+    'container' => 'Konteyner',
+    'container_setting' => 'Konteyner Ayarı',
+    'container_sections' => 'Konteyner Bölümleri',
+    'container_width' => 'Konteyner Genişliği',
+    'display_container' => 'Ekran Konteyneri',
+    'container_sticky' => 'Yapışkan Konteyner',
+    'remove_container' => 'Kabı Kaldır',
+    'no_sections' => 'Bölüm Yok',
+    'msg_theme_setting_updated' => 'Tema ayarı başarıyla güncellendi.',
+
+
+    'remove_section' => 'Bölümü kaldır',
+    'duplicate' => 'Kopyalamak',
+    'move_up' => 'Yukarı Taşı',
+    'move_down' => 'Aşağı inmek',
+    'to_top' => 'En üste',
+    'to_bottom' => 'Tabanına',
+];

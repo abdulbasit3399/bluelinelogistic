@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    'home' => 'Ev',
+    'you' => 'Sen',
+    'tags' => 'Etiketler',
+    'share' => 'Paylaşmak',
+    'pervious_article' => 'Geçici makale',
+    'next_article' => 'Sonraki makale',
+    'related_article' => 'İlgili Makaleler',
+    'comments' => 'Yorumlar',
+    'view_prev_comments' => 'Önceki yorumları görüntüle',
+    'view_prev_replies' => 'Önceki yanıtları görüntüle',
+    'waiting_for_approval' => 'Onay bekleniyor',
+    'reply' => 'Cevap vermek',
+    'reply_to' => 'Yanıtla',
+    'leave_reply' => 'Cevap bırakın',
+    'cancel_reply' => 'Yanıtı iptal et',
+    'msg_email_published' => 'E-posta hesabınız yayımlanmayacak.',
+    'fields_are_marked' => 'Gerekli alanlar işaretlendi',
+    'msg_save_author_data' => 'Bir sonraki yorumum için adımı, e-posta adresimi ve web sitemi bu tarayıcıya kaydet.',
+    'field_comment' => 'Yorum',
+    'field_name' => 'İsim',
+    'field_email' => 'E-posta',
+    'field_website' => 'İnternet sitesi',
+    'post_comment' => 'Yorum Gönder',
+    'new' => 'Yeni',
+    'articles' => 'Nesne',
+    'said' => 'söz konusu',
+];

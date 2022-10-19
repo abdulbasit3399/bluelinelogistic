@@ -1,0 +1,38 @@
+
+.social-counters-widget {
+    .social-counter-widget-ul {
+        .social-counter {
+            margin-bottom: 15px;
+            .wrapper-social {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .side1 {
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        span {
+                            color: #FFF;
+                            font-size: 22px;
+                        }
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                    }
+                    .sc-num {
+                        font-weight: bold;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                    }
+                }
+                .count-type {
+    
+                }
+            }
+        }
+    }
+}

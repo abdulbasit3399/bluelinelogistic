@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'setting' => 'Setting',
+    'module_setting' => ':module setting',
+    'setting_modules' => 'Setting modules',
+    'module_name' => 'Module name',
+    'item' => 'Item',
+    'add_new_item' => 'Add new item',
+    'manage_setting_module' => 'Manage setting module',
+    'ungroup' => 'Ungroup',
+    'theme_setting' => 'Theme setting',
+    'no_theme_setting' => 'Not found theme setting',
+    'add_section' => 'Add Section',
+    'add_widget' => 'Add Widget',
+    'widget' => 'Widget',
+    'add_container' => 'Add Container',
+    'container' => 'Container',
+    'container_setting' => 'Container Setting',
+    'container_sections' => 'Container Sections',
+    'container_width' => 'Container Width',
+    'display_container' => 'Display Container',
+    'container_sticky' => 'Container Sticky',
+    'remove_container' => 'Remove Container',
+    'no_sections' => 'No Sections',
+    'msg_theme_setting_updated' => 'Theme setting has been updated successfully.',
+
+
+    'remove_section' => 'Remove section',
+    'duplicate' => 'Duplicate',
+    'move_up' => 'Move Up',
+    'move_down' => 'Move Down',
+    'to_top' => 'To Top',
+    'to_bottom' => 'To Bottom',
+];

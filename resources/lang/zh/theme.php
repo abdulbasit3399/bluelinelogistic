@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'setting' =>'環境',
+    'module_setting' => ':模塊設置',
+    'setting_modules' => '設置模塊',
+    'module_name' => '模塊名稱',
+    'item' => '物品',
+    'add_new_item' => '添加新項目',
+    'manage_setting_module' => '管理設置模塊',
+    'ungroup' => '取消組合',
+    'theme_setting' => '主題設置',
+    'no_theme_setting' => '未找到主題設置',
+    'add_section' => '添加部分',
+    'add_widget' => '添加小部件',
+    'widget' => '小部件',
+    'add_container' => '添加容器',
+    'container' => '容器',
+    'container_setting' => '容器設置',
+    'container_sections' => '集裝箱部分',
+    'container_width' => '容器寬度',
+    'display_container' => '顯示容器',
+    'container_sticky' => '容器粘性',
+    'remove_container' => '刪除容器',
+    'no_sections' => '沒有部分',
+    'msg_theme_setting_updated' => '主題設置已成功更新。',
+
+
+    'remove_section' => '刪除部分',
+    'duplicate' => '複製',
+    'move_up' => '提升',
+    'move_down' => '下移',
+    'to_top' => '到達頂點',
+    'to_bottom' => '到底部',
+];

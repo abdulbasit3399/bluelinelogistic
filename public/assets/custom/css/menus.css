@@ -1,0 +1,66 @@
+#hwpwrap .spinner {
+  background: none;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 3px 0 0 8px;
+}
+#hwpwrap a.btn {
+  color: #3f4254 !important;
+}
+#hwpwrap a.btn:not(.btn-secondary) {
+  color: #FFF !important;
+}
+
+.card-menus .accordion-section-title {
+  border: 0 !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-menus .accordion-section-title::after {
+  content: "" !important;
+}
+.card-menus .accordion-section-title .text {
+  flex-basis: 80%;
+}
+.card-menus .accordion-section-title .icon {
+  text-align: right;
+  flex-basis: 20%;
+}
+.card-menus #post-body-content {
+  min-width: auto !important;
+}
+.card-menus #nav-menu-header {
+  border: none !important;
+}
+.card-menus .card-menu-content #post-body {
+  border: none !important;
+}
+.card-menus .card-menu-content #post-body .menu-item .menu-item-handle {
+  cursor: move;
+  width: 400px !important;
+}
+.card-menus .card-menu-content #post-body .menu-item .menu-item-settings {
+  width: 400px !important;
+}
+.card-menus .card-menu-content #post-body .menu-item .item-controls .item-edit::before {
+  content: "\f078" !important;
+  font: inherit;
+  height: 100%;
+  line-height: 45px;
+}
+.card-menus .card-menu-content #post-body .menu-item .btn-action-item {
+  padding: 5px 10px;
+}
+.card-menus .card-menu-content #post-body .nav-menus-php .menu-item-edit-active .item-edit::before {
+  content: "" !important;
+}
+.card-menus .card-menu-content .card-footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/*# sourceMappingURL=menus.css.map*/

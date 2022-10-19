@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    'home' => '家' ,
+    'you' =>  '你',
+    'tags' =>  '標籤',
+    'share' =>  '分享',
+    'pervious_article' =>  '以前的文章',
+    'next_article' =>  '下一篇文章',
+    'related_article' =>  '相關文章',
+    'comments' =>  '註釋',
+    'view_prev_comments' =>  '查看以前的評論',
+    'view_prev_replies' =>  '查看以前的回复',
+    'waiting_for_approval' =>  '等待批准',
+    'reply' =>  '回复',
+    'reply_to' =>  '回复',
+    'leave_reply' =>  '發表評論',
+    'cancel_reply' =>  '取消回复',
+    'msg_email_published' =>  '您的電子郵件地址不會被公開。',
+    'fields_are_marked' =>  '必需的地方已做標記',
+    'msg_save_author_data' =>  '在此瀏覽器中保存我的姓名、電子郵件和網站,以備下次評論時使用。',
+    'field_comment' =>  '評論',
+    'field_name' =>  '姓名',
+    'field_email' =>  '電子郵件',
+    'field_website' =>  '網站',
+    'post_comment' =>  '發表評論',
+    'new' =>  '新的',
+    'articles' =>  '文章',
+    'said' =>  '說',
+];

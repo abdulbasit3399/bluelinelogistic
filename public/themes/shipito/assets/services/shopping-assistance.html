@@ -1,0 +1,3454 @@
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="keywords"
+      content="example, example forwarding service, package forwarding, mail forwarding, forwarding service"
+    />
+    <meta
+      name="description"
+      content="example offers fast, reliable and efficient, package and mail forwarding to over 220 countries. We make it easy for customers all over the world to shop online from US stores."
+    />
+    <meta name="author" content="" />
+    <title>Site | Shop In The US &amp; Ship Anywhere | Free US Address</title>
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="styleSheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="styleSheet" href="../styles/style.css" type="text/css" />
+    <style>
+      .mobilesize {
+        display: none;
+      }
+      .fullsize {
+        display: block;
+      }
+
+      #banner-container {
+        display: none;
+      }
+      .top-banners .banner {
+        display: block;
+        height: 100px;
+        background-color: var(--black);
+      }
+
+      .top-banners .banner .vcenter {
+        margin-top: 35px;
+      }
+      .top-banners .banner .vcenter-br {
+        margin-top: 30px;
+      }
+
+      .top-banners .banner .btn-primary {
+        height: 40px;
+        width: 160px;
+        background-color: var(--pink);
+        border: 1px solid var(--pink);
+        padding-top: 10px;
+        margin-top: 30px;
+        font-size: 16px;
+      }
+
+      .closeit {
+        width: 100%;
+        position: absolute;
+        padding: 8px 10px 0 0;
+      }
+      .closeit I {
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <div id="menu-filler"></div>
+    <a name="page-top" id="page-top"></a>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top st-navbar">
+      <div id="banner-container" class="top-banners">
+        <script>
+          let bannercount = 0;
+          let thinbannercount = 0;
+          bannerheight = 100;
+          thinbannerheight = 70;
+          let maintop = 0;
+          let truetop = 0;
+          let bannertop = 0;
+          let topfooter = 0;
+          let bottomfooter = 0;
+          $(document).ready(function () {
+            let w = window.innerWidth;
+            if (w <= 767) thinbannerheight = bannerheight;
+            maintop = bannercount * bannerheight + thinbannercount * thinbannerheight;
+            truetop = $('.main-body').offset().top;
+            bannertop = truetop + maintop;
+
+            topfooter = $('.top-footer').offset().top;
+            bottomfooter = $('.bottom-footer').offset().top;
+            navheight = $('.st-navbar').height();
+            navheight += maintop;
+
+            let bottomfooteroffset = bottomfooter + maintop;
+            let topfooteroffset = topfooter + maintop;
+
+            if (maintop > 0) {
+              $('.st-navbar').height(navheight);
+              $('.main-body').offset({ top: bannertop });
+              $('.bottom-footer').offset({ top: bottomfooteroffset });
+              $('.top-footer').offset({ top: topfooteroffset });
+              $('#banner-container').show();
+            }
+          });
+
+          $(window).load(function () {
+            $('#banner-container button.close').click(function () {
+              maintop -= bannerheight;
+              bannertop = truetop + maintop;
+              let bottomfooteroffset = bottomfooter + maintop;
+              let topfooteroffset = topfooter + maintop;
+              let toclose = $(this).attr('id').replace('-close', '');
+              $('#' + toclose).slideUp();
+              $('.main-body').offset({ top: bannertop });
+              $('.bottom-footer').offset({ top: bottomfooteroffset });
+              $('.top-footer').offset({ top: topfooteroffset });
+            });
+          });
+        </script>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="BUTTON" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a href="/index.html">
+              <img src="imgs/home/blacklogo.svg" alt="logo" />
+            </a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav navbar-right hide-lg nav-buttons">
+            <li>
+              <div class="row top-buttons">
+                <div class="col-xs-6 text-center left">
+                  <a href="#account" class="btn btn-lg btn-secondary btn-login">Login</a>
+                </div>
+                <div class="col-xs-6 text-center right">
+                  <a href="#signup" class="btn btn-lg btn-primary">Sign Up</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right st-navbar-tabs">
+            <li>
+              <a href="#blog"><i class="icon-blog"></i> Blog</a>
+            </li>
+            <li>
+              <a href="#shipping-calculator"><i class="icon-shipping-calculator"></i> Shipping Calculator</a>
+            </li>
+            <li
+              class="dropdown st-countries st-country-pick-list"
+              data-action="link"
+              data-element="countrycode"
+              data-element-content="code"
+              data-url="/en//"
+            >
+              <a class="dropdown-toggle st-selected-country st-country-EG" data-toggle="dropdown" href="#"
+                >SHIP TO <span class="ga-caret"></span
+              ></a>
+              <!-- country-list -->
+              <ul class="dropdown-menu country-list">
+                <li><input type="text" class="form-control st-country-filter" id="country-lookup" /></li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AF"
+                    data-country-code="AF"
+                    data-country-name="Afghanistan"
+                    data-country-name-local="Afghanistan"
+                    data-country-id="121"
+                    >Afghanistan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AL"
+                    data-country-code="AL"
+                    data-country-name="Albania"
+                    data-country-name-local="Albania"
+                    data-country-id="154"
+                    >Albania</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DZ"
+                    data-country-code="DZ"
+                    data-country-name="Algeria"
+                    data-country-name-local="Algeria"
+                    data-country-id="23"
+                    >Algeria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AS"
+                    data-country-code="AS"
+                    data-country-name="American Samoa"
+                    data-country-name-local="American Samoa"
+                    data-country-id="207"
+                    >American Samoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AD"
+                    data-country-code="AD"
+                    data-country-name="Andorra"
+                    data-country-name-local="Andorra"
+                    data-country-id="155"
+                    >Andorra</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AO"
+                    data-country-code="AO"
+                    data-country-name="Angola"
+                    data-country-name-local="Angola"
+                    data-country-id="16"
+                    >Angola</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AI"
+                    data-country-code="AI"
+                    data-country-name="Anguilla"
+                    data-country-name-local="Anguilla"
+                    data-country-id="45"
+                    >Anguilla</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AQ"
+                    data-country-code="AQ"
+                    data-country-name="Antarctica"
+                    data-country-name-local="Antarctica"
+                    data-country-id="94"
+                    >Antarctica</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AG"
+                    data-country-code="AG"
+                    data-country-name="Antigua and Barbuda"
+                    data-country-name-local="Antigua and Barbuda"
+                    data-country-id="46"
+                    >Antigua and Barbuda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AR"
+                    data-country-code="AR"
+                    data-country-name="Argentina"
+                    data-country-name-local="Argentina"
+                    data-country-id="80"
+                    >Argentina</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AM"
+                    data-country-code="AM"
+                    data-country-name="Armenia"
+                    data-country-name-local="Armenia"
+                    data-country-id="95"
+                    >Armenia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AW"
+                    data-country-code="AW"
+                    data-country-name="Aruba"
+                    data-country-name-local="Aruba"
+                    data-country-id="47"
+                    >Aruba</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AC"
+                    data-country-code="AC"
+                    data-country-name="Ascension Island"
+                    data-country-name-local="Ascension Island"
+                    data-country-id="240"
+                    >Ascension Island</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AU"
+                    data-country-code="AU"
+                    data-country-name="Australia"
+                    data-country-name-local="Australia"
+                    data-country-id="194"
+                    >Australia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AT"
+                    data-country-code="AT"
+                    data-country-name="Austria"
+                    data-country-name-local="Austria"
+                    data-country-id="169"
+                    >Austria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AZ"
+                    data-country-code="AZ"
+                    data-country-name="Azerbaijan"
+                    data-country-name-local="Azerbaijan"
+                    data-country-id="96"
+                    >Azerbaijan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BS"
+                    data-country-code="BS"
+                    data-country-name="Bahamas"
+                    data-country-name-local="Bahamas"
+                    data-country-id="48"
+                    >Bahamas</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BH"
+                    data-country-code="BH"
+                    data-country-name="Bahrain"
+                    data-country-name-local="Bahrain"
+                    data-country-id="180"
+                    >Bahrain</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BD"
+                    data-country-code="BD"
+                    data-country-name="Bangladesh"
+                    data-country-name-local="Bangladesh"
+                    data-country-id="122"
+                    >Bangladesh</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BB"
+                    data-country-code="BB"
+                    data-country-name="Barbados"
+                    data-country-name-local="Barbados"
+                    data-country-id="49"
+                    >Barbados</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BY"
+                    data-country-code="BY"
+                    data-country-name="Belarus"
+                    data-country-name-local="Belarus"
+                    data-country-id="132"
+                    >Belarus</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BE"
+                    data-country-code="BE"
+                    data-country-name="Belgium"
+                    data-country-name-local="Belgium"
+                    data-country-id="170"
+                    >Belgium</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BZ"
+                    data-country-code="BZ"
+                    data-country-name="Belize"
+                    data-country-name-local="Belize"
+                    data-country-id="68"
+                    >Belize</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BJ"
+                    data-country-code="BJ"
+                    data-country-name="Benin"
+                    data-country-name-local="Benin"
+                    data-country-id="32"
+                    >Benin</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BM"
+                    data-country-code="BM"
+                    data-country-name="Bermuda"
+                    data-country-name-local="Bermuda"
+                    data-country-id="76"
+                    >Bermuda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BT"
+                    data-country-code="BT"
+                    data-country-name="Bhutan"
+                    data-country-name-local="Bhutan"
+                    data-country-id="123"
+                    >Bhutan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BO"
+                    data-country-code="BO"
+                    data-country-name="Bolivia"
+                    data-country-name-local="Bolivia"
+                    data-country-id="81"
+                    >Bolivia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BQ"
+                    data-country-code="BQ"
+                    data-country-name="Bonaire, Sint Eustatius &amp; Saba"
+                    data-country-name-local="Bonaire, Sint Eustatius &amp; Saba"
+                    data-country-id="235"
+                    >Bonaire, Sint Eustatius &amp; Saba</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BA"
+                    data-country-code="BA"
+                    data-country-name="Bosnia and Herzegovina"
+                    data-country-name-local="Bosnia and Herzegovina"
+                    data-country-id="156"
+                    >Bosnia and Herzegovina</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BW"
+                    data-country-code="BW"
+                    data-country-name="Botswana"
+                    data-country-name-local="Botswana"
+                    data-country-id="27"
+                    >Botswana</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BR"
+                    data-country-code="BR"
+                    data-country-name="Brazil"
+                    data-country-name-local="Brazil"
+                    data-country-id="82"
+                    >Brazil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VG"
+                    data-country-code="VG"
+                    data-country-name="British Virgin Islands"
+                    data-country-name-local="British Virgin Islands"
+                    data-country-id="50"
+                    >British Virgin Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BN"
+                    data-country-code="BN"
+                    data-country-name="Brunei Darussalam"
+                    data-country-name-local="Brunei Darussalam"
+                    data-country-id="111"
+                    >Brunei Darussalam</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BG"
+                    data-country-code="BG"
+                    data-country-name="Bulgaria"
+                    data-country-name-local="Bulgaria"
+                    data-country-id="136"
+                    >Bulgaria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BF"
+                    data-country-code="BF"
+                    data-country-name="Burkina Faso"
+                    data-country-name-local="Burkina Faso"
+                    data-country-id="33"
+                    >Burkina Faso</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BI"
+                    data-country-code="BI"
+                    data-country-name="Burundi"
+                    data-country-name-local="Burundi"
+                    data-country-id="1"
+                    >Burundi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KH"
+                    data-country-code="KH"
+                    data-country-name="Cambodia"
+                    data-country-name-local="Cambodia"
+                    data-country-id="112"
+                    >Cambodia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CM"
+                    data-country-code="CM"
+                    data-country-name="Cameroon"
+                    data-country-name-local="Cameroon"
+                    data-country-id="17"
+                    >Cameroon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CA"
+                    data-country-code="CA"
+                    data-country-name="Canada"
+                    data-country-name-local="Canada"
+                    data-country-id="77"
+                    >Canada</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CV"
+                    data-country-code="CV"
+                    data-country-name="Cape Verde"
+                    data-country-name-local="Cape Verde"
+                    data-country-id="34"
+                    >Cape Verde</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KY"
+                    data-country-code="KY"
+                    data-country-name="Cayman Islands"
+                    data-country-name-local="Cayman Islands"
+                    data-country-id="51"
+                    >Cayman Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CF"
+                    data-country-code="CF"
+                    data-country-name="Central African Republic"
+                    data-country-name-local="Central African Republic"
+                    data-country-id="217"
+                    >Central African Republic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TD"
+                    data-country-code="TD"
+                    data-country-name="Chad"
+                    data-country-name-local="Chad"
+                    data-country-id="18"
+                    >Chad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CL"
+                    data-country-code="CL"
+                    data-country-name="Chile"
+                    data-country-name-local="Chile"
+                    data-country-id="83"
+                    >Chile</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CN"
+                    data-country-code="CN"
+                    data-country-name="China"
+                    data-country-name-local="China"
+                    data-country-id="103"
+                    >China</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CX"
+                    data-country-code="CX"
+                    data-country-name="Christmas Island"
+                    data-country-name-local="Christmas Island"
+                    data-country-id="195"
+                    >Christmas Island</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CO"
+                    data-country-code="CO"
+                    data-country-name="Colombia"
+                    data-country-name-local="Colombia"
+                    data-country-id="84"
+                    >Colombia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KM"
+                    data-country-code="KM"
+                    data-country-name="Comoros"
+                    data-country-name-local="Comoros"
+                    data-country-id="223"
+                    >Comoros</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CG"
+                    data-country-code="CG"
+                    data-country-name="Congo"
+                    data-country-name-local="Congo"
+                    data-country-id="19"
+                    >Congo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CD"
+                    data-country-code="CD"
+                    data-country-name="Congo-Kinshasa"
+                    data-country-name-local="Congo-Kinshasa"
+                    data-country-id="20"
+                    >Congo-Kinshasa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CK"
+                    data-country-code="CK"
+                    data-country-name="Cook Islands"
+                    data-country-name-local="Cook Islands"
+                    data-country-id="208"
+                    >Cook Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CR"
+                    data-country-code="CR"
+                    data-country-name="Costa Rica"
+                    data-country-name-local="Costa Rica"
+                    data-country-id="69"
+                    >Costa Rica</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CI"
+                    data-country-code="CI"
+                    data-country-name="Cote d'Ivoire"
+                    data-country-name-local="Cote d'Ivoire"
+                    data-country-id="35"
+                    >Cote d'Ivoire</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-HR"
+                    data-country-code="HR"
+                    data-country-name="Croatia"
+                    data-country-name-local="Croatia"
+                    data-country-id="157"
+                    >Croatia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CW"
+                    data-country-code="CW"
+                    data-country-name="Curacao"
+                    data-country-name-local="Curacao"
+                    data-country-id="218"
+                    >Curacao</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CY"
+                    data-country-code="CY"
+                    data-country-name="Cyprus"
+                    data-country-name-local="Cyprus"
+                    data-country-id="129"
+                    >Cyprus</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CZ"
+                    data-country-code="CZ"
+                    data-country-name="Czech Republic"
+                    data-country-name-local="Czech Republic"
+                    data-country-id="137"
+                    >Czech Republic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DK"
+                    data-country-code="DK"
+                    data-country-name="Denmark"
+                    data-country-name-local="Denmark"
+                    data-country-id="142"
+                    >Denmark</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DJ"
+                    data-country-code="DJ"
+                    data-country-name="Djibouti"
+                    data-country-name-local="Djibouti"
+                    data-country-id="219"
+                    >Djibouti</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DM"
+                    data-country-code="DM"
+                    data-country-name="Dominica"
+                    data-country-name-local="Dominica"
+                    data-country-id="53"
+                    >Dominica</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DO"
+                    data-country-code="DO"
+                    data-country-name="Dominican Republic"
+                    data-country-name-local="Dominican Republic"
+                    data-country-id="54"
+                    >Dominican Republic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-EC"
+                    data-country-code="EC"
+                    data-country-name="Ecuador"
+                    data-country-name-local="Ecuador"
+                    data-country-id="85"
+                    >Ecuador</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-EG"
+                    data-country-code="EG"
+                    data-country-name="Egypt"
+                    data-country-name-local="Egypt"
+                    data-country-id="178"
+                    >Egypt</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SV"
+                    data-country-code="SV"
+                    data-country-name="El Salvador"
+                    data-country-name-local="El Salvador"
+                    data-country-id="70"
+                    >El Salvador</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GQ"
+                    data-country-code="GQ"
+                    data-country-name="Equatorial Guinea"
+                    data-country-name-local="Equatorial Guinea"
+                    data-country-id="221"
+                    >Equatorial Guinea</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ER"
+                    data-country-code="ER"
+                    data-country-name="Eritrea"
+                    data-country-name-local="Eritrea"
+                    data-country-id="220"
+                    >Eritrea</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-EE"
+                    data-country-code="EE"
+                    data-country-name="Estonia"
+                    data-country-name-local="Estonia"
+                    data-country-id="143"
+                    >Estonia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ET"
+                    data-country-code="ET"
+                    data-country-name="Ethiopia"
+                    data-country-name-local="Ethiopia"
+                    data-country-id="2"
+                    >Ethiopia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FK"
+                    data-country-code="FK"
+                    data-country-name="Falkland Islands"
+                    data-country-name-local="Falkland Islands"
+                    data-country-id="86"
+                    >Falkland Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FO"
+                    data-country-code="FO"
+                    data-country-name="Faroe Islands"
+                    data-country-name-local="Faroe Islands"
+                    data-country-id="144"
+                    >Faroe Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FJ"
+                    data-country-code="FJ"
+                    data-country-name="Fiji"
+                    data-country-name-local="Fiji"
+                    data-country-id="197"
+                    >Fiji</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FI"
+                    data-country-code="FI"
+                    data-country-name="Finland"
+                    data-country-name-local="Finland"
+                    data-country-id="145"
+                    >Finland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FR"
+                    data-country-code="FR"
+                    data-country-name="France"
+                    data-country-name-local="France"
+                    data-country-id="171"
+                    >France</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GF"
+                    data-country-code="GF"
+                    data-country-name="French Guiana"
+                    data-country-name-local="French Guiana"
+                    data-country-id="87"
+                    >French Guiana</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PF"
+                    data-country-code="PF"
+                    data-country-name="French Polynesia"
+                    data-country-name-local="French Polynesia"
+                    data-country-id="209"
+                    >French Polynesia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GA"
+                    data-country-code="GA"
+                    data-country-name="Gabon"
+                    data-country-name-local="Gabon"
+                    data-country-id="21"
+                    >Gabon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GM"
+                    data-country-code="GM"
+                    data-country-name="Gambia"
+                    data-country-name-local="Gambia"
+                    data-country-id="36"
+                    >Gambia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GE"
+                    data-country-code="GE"
+                    data-country-name="Georgia"
+                    data-country-name-local="Georgia"
+                    data-country-id="97"
+                    >Georgia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-DE"
+                    data-country-code="DE"
+                    data-country-name="Germany"
+                    data-country-name-local="Germany"
+                    data-country-id="172"
+                    >Germany</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GH"
+                    data-country-code="GH"
+                    data-country-name="Ghana"
+                    data-country-name-local="Ghana"
+                    data-country-id="37"
+                    >Ghana</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GI"
+                    data-country-code="GI"
+                    data-country-name="Gibraltar"
+                    data-country-name-local="Gibraltar"
+                    data-country-id="158"
+                    >Gibraltar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GR"
+                    data-country-code="GR"
+                    data-country-name="Greece"
+                    data-country-name-local="Greece"
+                    data-country-id="159"
+                    >Greece</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GL"
+                    data-country-code="GL"
+                    data-country-name="Greenland"
+                    data-country-name-local="Greenland"
+                    data-country-id="78"
+                    >Greenland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GD"
+                    data-country-code="GD"
+                    data-country-name="Grenada"
+                    data-country-name-local="Grenada"
+                    data-country-id="55"
+                    >Grenada</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GP"
+                    data-country-code="GP"
+                    data-country-name="Guadeloupe"
+                    data-country-name-local="Guadeloupe"
+                    data-country-id="56"
+                    >Guadeloupe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GU"
+                    data-country-code="GU"
+                    data-country-name="Guam"
+                    data-country-name-local="Guam"
+                    data-country-id="202"
+                    >Guam</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GT"
+                    data-country-code="GT"
+                    data-country-name="Guatemala"
+                    data-country-name-local="Guatemala"
+                    data-country-id="71"
+                    >Guatemala</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GG"
+                    data-country-code="GG"
+                    data-country-name="Guernsey"
+                    data-country-name-local="Guernsey"
+                    data-country-id="130"
+                    >Guernsey</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GN"
+                    data-country-code="GN"
+                    data-country-name="Guinea"
+                    data-country-name-local="Guinea"
+                    data-country-id="38"
+                    >Guinea</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GW"
+                    data-country-code="GW"
+                    data-country-name="Guinea-Bissau"
+                    data-country-name-local="Guinea-Bissau"
+                    data-country-id="222"
+                    >Guinea-Bissau</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GY"
+                    data-country-code="GY"
+                    data-country-name="Guyana"
+                    data-country-name-local="Guyana"
+                    data-country-id="88"
+                    >Guyana</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-HT"
+                    data-country-code="HT"
+                    data-country-name="Haiti"
+                    data-country-name-local="Haiti"
+                    data-country-id="57"
+                    >Haiti</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-HN"
+                    data-country-code="HN"
+                    data-country-name="Honduras"
+                    data-country-name-local="Honduras"
+                    data-country-id="72"
+                    >Honduras</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-HK"
+                    data-country-code="HK"
+                    data-country-name="Hong Kong"
+                    data-country-name-local="Hong Kong"
+                    data-country-id="104"
+                    >Hong Kong</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-HU"
+                    data-country-code="HU"
+                    data-country-name="Hungary"
+                    data-country-name-local="Hungary"
+                    data-country-id="138"
+                    >Hungary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IS"
+                    data-country-code="IS"
+                    data-country-name="Iceland"
+                    data-country-name-local="Iceland"
+                    data-country-id="146"
+                    >Iceland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IN"
+                    data-country-code="IN"
+                    data-country-name="India"
+                    data-country-name-local="India"
+                    data-country-id="124"
+                    >India</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ID"
+                    data-country-code="ID"
+                    data-country-name="Indonesia"
+                    data-country-name-local="Indonesia"
+                    data-country-id="113"
+                    >Indonesia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IQ"
+                    data-country-code="IQ"
+                    data-country-name="Iraq"
+                    data-country-name-local="Iraq"
+                    data-country-id="181"
+                    >Iraq</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IE"
+                    data-country-code="IE"
+                    data-country-name="Ireland"
+                    data-country-name-local="Ireland"
+                    data-country-id="147"
+                    >Ireland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IM"
+                    data-country-code="IM"
+                    data-country-name="Isle of Man"
+                    data-country-name-local="Isle of Man"
+                    data-country-id="148"
+                    >Isle of Man</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IL"
+                    data-country-code="IL"
+                    data-country-name="Israel"
+                    data-country-name-local="Israel"
+                    data-country-id="182"
+                    >Israel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-IT"
+                    data-country-code="IT"
+                    data-country-name="Italy"
+                    data-country-name-local="Italy"
+                    data-country-id="160"
+                    >Italy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-JM"
+                    data-country-code="JM"
+                    data-country-name="Jamaica"
+                    data-country-name-local="Jamaica"
+                    data-country-id="58"
+                    >Jamaica</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-JP"
+                    data-country-code="JP"
+                    data-country-name="Japan"
+                    data-country-name-local="Japan"
+                    data-country-id="105"
+                    >Japan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-JE"
+                    data-country-code="JE"
+                    data-country-name="Jersey"
+                    data-country-name-local="Jersey"
+                    data-country-id="131"
+                    >Jersey</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-JO"
+                    data-country-code="JO"
+                    data-country-name="Jordan"
+                    data-country-name-local="Jordan"
+                    data-country-id="183"
+                    >Jordan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KZ"
+                    data-country-code="KZ"
+                    data-country-name="Kazakhstan"
+                    data-country-name-local="Kazakhstan"
+                    data-country-id="98"
+                    >Kazakhstan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KE"
+                    data-country-code="KE"
+                    data-country-name="Kenya"
+                    data-country-name-local="Kenya"
+                    data-country-id="3"
+                    >Kenya</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KI"
+                    data-country-code="KI"
+                    data-country-name="Kiribati"
+                    data-country-name-local="Kiribati"
+                    data-country-id="203"
+                    >Kiribati</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KR"
+                    data-country-code="KR"
+                    data-country-name="Korea"
+                    data-country-name-local="Korea"
+                    data-country-id="109"
+                    >Korea</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KW"
+                    data-country-code="KW"
+                    data-country-name="Kuwait"
+                    data-country-name-local="Kuwait"
+                    data-country-id="184"
+                    >Kuwait</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KG"
+                    data-country-code="KG"
+                    data-country-name="Kyrgyzstan"
+                    data-country-name-local="Kyrgyzstan"
+                    data-country-id="99"
+                    >Kyrgyzstan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LA"
+                    data-country-code="LA"
+                    data-country-name="Laos"
+                    data-country-name-local="Laos"
+                    data-country-id="114"
+                    >Laos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LV"
+                    data-country-code="LV"
+                    data-country-name="Latvia"
+                    data-country-name-local="Latvia"
+                    data-country-id="149"
+                    >Latvia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LB"
+                    data-country-code="LB"
+                    data-country-name="Lebanon"
+                    data-country-name-local="Lebanon"
+                    data-country-id="185"
+                    >Lebanon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LS"
+                    data-country-code="LS"
+                    data-country-name="Lesotho"
+                    data-country-name-local="Lesotho"
+                    data-country-id="28"
+                    >Lesotho</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LR"
+                    data-country-code="LR"
+                    data-country-name="Liberia"
+                    data-country-name-local="Liberia"
+                    data-country-id="39"
+                    >Liberia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LY"
+                    data-country-code="LY"
+                    data-country-name="Libya"
+                    data-country-name-local="Libya"
+                    data-country-id="215"
+                    >Libya</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LI"
+                    data-country-code="LI"
+                    data-country-name="Liechtenstein"
+                    data-country-name-local="Liechtenstein"
+                    data-country-id="173"
+                    >Liechtenstein</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LT"
+                    data-country-code="LT"
+                    data-country-name="Lithuania"
+                    data-country-name-local="Lithuania"
+                    data-country-id="150"
+                    >Lithuania</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LU"
+                    data-country-code="LU"
+                    data-country-name="Luxembourg"
+                    data-country-name-local="Luxembourg"
+                    data-country-id="174"
+                    >Luxembourg</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MO"
+                    data-country-code="MO"
+                    data-country-name="Macau"
+                    data-country-name-local="Macau"
+                    data-country-id="106"
+                    >Macau</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MK"
+                    data-country-code="MK"
+                    data-country-name="Macedonia"
+                    data-country-name-local="Macedonia"
+                    data-country-id="161"
+                    >Macedonia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MG"
+                    data-country-code="MG"
+                    data-country-name="Madagascar"
+                    data-country-name-local="Madagascar"
+                    data-country-id="4"
+                    >Madagascar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MW"
+                    data-country-code="MW"
+                    data-country-name="Malawi"
+                    data-country-name-local="Malawi"
+                    data-country-id="5"
+                    >Malawi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MY"
+                    data-country-code="MY"
+                    data-country-name="Malaysia"
+                    data-country-name-local="Malaysia"
+                    data-country-id="115"
+                    >Malaysia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MV"
+                    data-country-code="MV"
+                    data-country-name="Maldives"
+                    data-country-name-local="Maldives"
+                    data-country-id="125"
+                    >Maldives</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ML"
+                    data-country-code="ML"
+                    data-country-name="Mali"
+                    data-country-name-local="Mali"
+                    data-country-id="40"
+                    >Mali</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MT"
+                    data-country-code="MT"
+                    data-country-name="Malta"
+                    data-country-name-local="Malta"
+                    data-country-id="162"
+                    >Malta</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MH"
+                    data-country-code="MH"
+                    data-country-name="Marshall Islands"
+                    data-country-name-local="Marshall Islands"
+                    data-country-id="204"
+                    >Marshall Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MQ"
+                    data-country-code="MQ"
+                    data-country-name="Martinique"
+                    data-country-name-local="Martinique"
+                    data-country-id="59"
+                    >Martinique</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MR"
+                    data-country-code="MR"
+                    data-country-name="Mauritania"
+                    data-country-name-local="Mauritania"
+                    data-country-id="224"
+                    >Mauritania</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MU"
+                    data-country-code="MU"
+                    data-country-name="Mauritius"
+                    data-country-name-local="Mauritius"
+                    data-country-id="6"
+                    >Mauritius</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-YT"
+                    data-country-code="YT"
+                    data-country-name="Mayotte"
+                    data-country-name-local="Mayotte"
+                    data-country-id="7"
+                    >Mayotte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MX"
+                    data-country-code="MX"
+                    data-country-name="Mexico"
+                    data-country-name-local="Mexico"
+                    data-country-id="73"
+                    >Mexico</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-FM"
+                    data-country-code="FM"
+                    data-country-name="Micronesia"
+                    data-country-name-local="Micronesia"
+                    data-country-id="205"
+                    >Micronesia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MD"
+                    data-country-code="MD"
+                    data-country-name="Moldova"
+                    data-country-name-local="Moldova"
+                    data-country-id="133"
+                    >Moldova</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MC"
+                    data-country-code="MC"
+                    data-country-name="Monaco"
+                    data-country-name-local="Monaco"
+                    data-country-id="175"
+                    >Monaco</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MN"
+                    data-country-code="MN"
+                    data-country-name="Mongolia"
+                    data-country-name-local="Mongolia"
+                    data-country-id="107"
+                    >Mongolia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ME"
+                    data-country-code="ME"
+                    data-country-name="Montenegro"
+                    data-country-name-local="Montenegro"
+                    data-country-id="163"
+                    >Montenegro</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MS"
+                    data-country-code="MS"
+                    data-country-name="Montserrat"
+                    data-country-name-local="Montserrat"
+                    data-country-id="60"
+                    >Montserrat</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MA"
+                    data-country-code="MA"
+                    data-country-name="Morocco"
+                    data-country-name-local="Morocco"
+                    data-country-id="24"
+                    >Morocco</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MZ"
+                    data-country-code="MZ"
+                    data-country-name="Mozambique"
+                    data-country-name-local="Mozambique"
+                    data-country-id="8"
+                    >Mozambique</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NA"
+                    data-country-code="NA"
+                    data-country-name="Namibia"
+                    data-country-name-local="Namibia"
+                    data-country-id="29"
+                    >Namibia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NR"
+                    data-country-code="NR"
+                    data-country-name="Nauru"
+                    data-country-name-local="Nauru"
+                    data-country-id="225"
+                    >Nauru</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NP"
+                    data-country-code="NP"
+                    data-country-name="Nepal"
+                    data-country-name-local="Nepal"
+                    data-country-id="126"
+                    >Nepal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NL"
+                    data-country-code="NL"
+                    data-country-name="Netherlands"
+                    data-country-name-local="Netherlands"
+                    data-country-id="176"
+                    >Netherlands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NC"
+                    data-country-code="NC"
+                    data-country-name="New Caledonia"
+                    data-country-name-local="New Caledonia"
+                    data-country-id="198"
+                    >New Caledonia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NZ"
+                    data-country-code="NZ"
+                    data-country-name="New Zealand"
+                    data-country-name-local="New Zealand"
+                    data-country-id="196"
+                    >New Zealand</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NI"
+                    data-country-code="NI"
+                    data-country-name="Nicaragua"
+                    data-country-name-local="Nicaragua"
+                    data-country-id="74"
+                    >Nicaragua</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NE"
+                    data-country-code="NE"
+                    data-country-name="Niger"
+                    data-country-name-local="Niger"
+                    data-country-id="41"
+                    >Niger</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NG"
+                    data-country-code="NG"
+                    data-country-name="Nigeria"
+                    data-country-name-local="Nigeria"
+                    data-country-id="42"
+                    >Nigeria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NU"
+                    data-country-code="NU"
+                    data-country-name="Niue"
+                    data-country-name-local="Niue"
+                    data-country-id="210"
+                    >Niue</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MP"
+                    data-country-code="MP"
+                    data-country-name="Northern Mariana Islands (Saipan)"
+                    data-country-name-local="Northern Mariana Islands (Saipan)"
+                    data-country-id="238"
+                    >Northern Mariana Islands (Saipan)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-NO"
+                    data-country-code="NO"
+                    data-country-name="Norway"
+                    data-country-name-local="Norway"
+                    data-country-id="151"
+                    >Norway</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-OM"
+                    data-country-code="OM"
+                    data-country-name="Oman"
+                    data-country-name-local="Oman"
+                    data-country-id="186"
+                    >Oman</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PK"
+                    data-country-code="PK"
+                    data-country-name="Pakistan"
+                    data-country-name-local="Pakistan"
+                    data-country-id="127"
+                    >Pakistan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PW"
+                    data-country-code="PW"
+                    data-country-name="Palau"
+                    data-country-name-local="Palau"
+                    data-country-id="206"
+                    >Palau</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PA"
+                    data-country-code="PA"
+                    data-country-name="Panama"
+                    data-country-name-local="Panama"
+                    data-country-id="75"
+                    >Panama</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PG"
+                    data-country-code="PG"
+                    data-country-name="Papua New Guinea"
+                    data-country-name-local="Papua New Guinea"
+                    data-country-id="199"
+                    >Papua New Guinea</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PY"
+                    data-country-code="PY"
+                    data-country-name="Paraguay"
+                    data-country-name-local="Paraguay"
+                    data-country-id="89"
+                    >Paraguay</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PE"
+                    data-country-code="PE"
+                    data-country-name="Peru"
+                    data-country-name-local="Peru"
+                    data-country-id="90"
+                    >Peru</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PH"
+                    data-country-code="PH"
+                    data-country-name="Philippines"
+                    data-country-name-local="Philippines"
+                    data-country-id="117"
+                    >Philippines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PN"
+                    data-country-code="PN"
+                    data-country-name="Pitcairn Islands"
+                    data-country-name-local="Pitcairn Islands"
+                    data-country-id="227"
+                    >Pitcairn Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PL"
+                    data-country-code="PL"
+                    data-country-name="Poland"
+                    data-country-name-local="Poland"
+                    data-country-id="139"
+                    >Poland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PT"
+                    data-country-code="PT"
+                    data-country-name="Portugal"
+                    data-country-name-local="Portugal"
+                    data-country-id="164"
+                    >Portugal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PR"
+                    data-country-code="PR"
+                    data-country-name="Puerto Rico"
+                    data-country-name-local="Puerto Rico"
+                    data-country-id="62"
+                    >Puerto Rico</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-QA"
+                    data-country-code="QA"
+                    data-country-name="Qatar"
+                    data-country-name-local="Qatar"
+                    data-country-id="188"
+                    >Qatar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-RE"
+                    data-country-code="RE"
+                    data-country-name="Reunion"
+                    data-country-name-local="Reunion"
+                    data-country-id="9"
+                    >Reunion</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-RO"
+                    data-country-code="RO"
+                    data-country-name="Romania"
+                    data-country-name-local="Romania"
+                    data-country-id="140"
+                    >Romania</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-RU"
+                    data-country-code="RU"
+                    data-country-name="Russian Federation"
+                    data-country-name-local="Russian Federation"
+                    data-country-id="134"
+                    >Russian Federation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-RW"
+                    data-country-code="RW"
+                    data-country-name="Rwanda"
+                    data-country-name-local="Rwanda"
+                    data-country-id="228"
+                    >Rwanda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-BL"
+                    data-country-code="BL"
+                    data-country-name="Saint Barthelemy"
+                    data-country-name-local="Saint Barthelemy"
+                    data-country-id="216"
+                    >Saint Barthelemy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SH"
+                    data-country-code="SH"
+                    data-country-name="Saint Helena"
+                    data-country-name-local="Saint Helena"
+                    data-country-id="236"
+                    >Saint Helena</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-KN"
+                    data-country-code="KN"
+                    data-country-name="Saint Kitts and Nevis"
+                    data-country-name-local="Saint Kitts and Nevis"
+                    data-country-id="63"
+                    >Saint Kitts and Nevis</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LC"
+                    data-country-code="LC"
+                    data-country-name="Saint Lucia"
+                    data-country-name-local="Saint Lucia"
+                    data-country-id="213"
+                    >Saint Lucia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-MF"
+                    data-country-code="MF"
+                    data-country-name="Saint Martin"
+                    data-country-name-local="Saint Martin"
+                    data-country-id="214"
+                    >Saint Martin</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-PM"
+                    data-country-code="PM"
+                    data-country-name="Saint Pierre and Miquelon"
+                    data-country-name-local="Saint Pierre and Miquelon"
+                    data-country-id="226"
+                    >Saint Pierre and Miquelon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VC"
+                    data-country-code="VC"
+                    data-country-name="Saint Vincent and Grenadines"
+                    data-country-name-local="Saint Vincent and Grenadines"
+                    data-country-id="64"
+                    >Saint Vincent and Grenadines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-WS"
+                    data-country-code="WS"
+                    data-country-name="Samoa"
+                    data-country-name-local="Samoa"
+                    data-country-id="211"
+                    >Samoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SM"
+                    data-country-code="SM"
+                    data-country-name="San Marino"
+                    data-country-name-local="San Marino"
+                    data-country-id="165"
+                    >San Marino</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ST"
+                    data-country-code="ST"
+                    data-country-name="Sao Tome and Principe"
+                    data-country-name-local="Sao Tome and Principe"
+                    data-country-id="22"
+                    >Sao Tome and Principe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SA"
+                    data-country-code="SA"
+                    data-country-name="Saudi Arabia"
+                    data-country-name-local="Saudi Arabia"
+                    data-country-id="189"
+                    >Saudi Arabia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SN"
+                    data-country-code="SN"
+                    data-country-name="Senegal"
+                    data-country-name-local="Senegal"
+                    data-country-id="43"
+                    >Senegal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-RS"
+                    data-country-code="RS"
+                    data-country-name="Serbia"
+                    data-country-name-local="Serbia"
+                    data-country-id="166"
+                    >Serbia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SC"
+                    data-country-code="SC"
+                    data-country-name="Seychelles"
+                    data-country-name-local="Seychelles"
+                    data-country-id="10"
+                    >Seychelles</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SL"
+                    data-country-code="SL"
+                    data-country-name="Sierra Leone"
+                    data-country-name-local="Sierra Leone"
+                    data-country-id="230"
+                    >Sierra Leone</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SG"
+                    data-country-code="SG"
+                    data-country-name="Singapore"
+                    data-country-name-local="Singapore"
+                    data-country-id="118"
+                    >Singapore</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SX"
+                    data-country-code="SX"
+                    data-country-name="Sint Maarten"
+                    data-country-name-local="Sint Maarten"
+                    data-country-id="234"
+                    >Sint Maarten</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SK"
+                    data-country-code="SK"
+                    data-country-name="Slovakia"
+                    data-country-name-local="Slovakia"
+                    data-country-id="141"
+                    >Slovakia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SI"
+                    data-country-code="SI"
+                    data-country-name="Slovenia"
+                    data-country-name-local="Slovenia"
+                    data-country-id="167"
+                    >Slovenia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SB"
+                    data-country-code="SB"
+                    data-country-name="Solomon Islands"
+                    data-country-name-local="Solomon Islands"
+                    data-country-id="200"
+                    >Solomon Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SO"
+                    data-country-code="SO"
+                    data-country-name="Somalia"
+                    data-country-name-local="Somalia"
+                    data-country-id="11"
+                    >Somalia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ZA"
+                    data-country-code="ZA"
+                    data-country-name="South Africa"
+                    data-country-name-local="South Africa"
+                    data-country-id="30"
+                    >South Africa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ES"
+                    data-country-code="ES"
+                    data-country-name="Spain"
+                    data-country-name-local="Spain"
+                    data-country-id="168"
+                    >Spain</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-LK"
+                    data-country-code="LK"
+                    data-country-name="Sri Lanka"
+                    data-country-name-local="Sri Lanka"
+                    data-country-id="128"
+                    >Sri Lanka</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SR"
+                    data-country-code="SR"
+                    data-country-name="Suriname"
+                    data-country-name-local="Suriname"
+                    data-country-id="91"
+                    >Suriname</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SZ"
+                    data-country-code="SZ"
+                    data-country-name="Swaziland"
+                    data-country-name-local="Swaziland"
+                    data-country-id="31"
+                    >Swaziland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-SE"
+                    data-country-code="SE"
+                    data-country-name="Sweden"
+                    data-country-name-local="Sweden"
+                    data-country-id="152"
+                    >Sweden</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-CH"
+                    data-country-code="CH"
+                    data-country-name="Switzerland"
+                    data-country-name-local="Switzerland"
+                    data-country-id="177"
+                    >Switzerland</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TW"
+                    data-country-code="TW"
+                    data-country-name="Taiwan"
+                    data-country-name-local="Taiwan"
+                    data-country-id="110"
+                    >Taiwan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TJ"
+                    data-country-code="TJ"
+                    data-country-name="Tajikistan"
+                    data-country-name-local="Tajikistan"
+                    data-country-id="100"
+                    >Tajikistan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TZ"
+                    data-country-code="TZ"
+                    data-country-name="Tanzania"
+                    data-country-name-local="Tanzania"
+                    data-country-id="12"
+                    >Tanzania</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TH"
+                    data-country-code="TH"
+                    data-country-name="Thailand"
+                    data-country-name-local="Thailand"
+                    data-country-id="119"
+                    >Thailand</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TL"
+                    data-country-code="TL"
+                    data-country-name="Timor-Leste"
+                    data-country-name-local="Timor-Leste"
+                    data-country-id="231"
+                    >Timor-Leste</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TG"
+                    data-country-code="TG"
+                    data-country-name="Togo"
+                    data-country-name-local="Togo"
+                    data-country-id="44"
+                    >Togo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TO"
+                    data-country-code="TO"
+                    data-country-name="Tonga"
+                    data-country-name-local="Tonga"
+                    data-country-id="212"
+                    >Tonga</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TT"
+                    data-country-code="TT"
+                    data-country-name="Trinidad and Tobago"
+                    data-country-name-local="Trinidad and Tobago"
+                    data-country-id="65"
+                    >Trinidad and Tobago</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TA"
+                    data-country-code="TA"
+                    data-country-name="Tristan da Cunha"
+                    data-country-name-local="Tristan da Cunha"
+                    data-country-id="241"
+                    >Tristan da Cunha</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TN"
+                    data-country-code="TN"
+                    data-country-name="Tunisia"
+                    data-country-name-local="Tunisia"
+                    data-country-id="26"
+                    >Tunisia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TR"
+                    data-country-code="TR"
+                    data-country-name="Turkey"
+                    data-country-name-local="Turkey"
+                    data-country-id="191"
+                    >Turkey</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TM"
+                    data-country-code="TM"
+                    data-country-name="Turkmenistan"
+                    data-country-name-local="Turkmenistan"
+                    data-country-id="101"
+                    >Turkmenistan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TC"
+                    data-country-code="TC"
+                    data-country-name="Turks and Caicos Islands"
+                    data-country-name-local="Turks and Caicos Islands"
+                    data-country-id="66"
+                    >Turks and Caicos Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-TV"
+                    data-country-code="TV"
+                    data-country-name="Tuvalu"
+                    data-country-name-local="Tuvalu"
+                    data-country-id="239"
+                    >Tuvalu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VI"
+                    data-country-code="VI"
+                    data-country-name="U.S. Virgin Islands"
+                    data-country-name-local="U.S. Virgin Islands"
+                    data-country-id="67"
+                    >U.S. Virgin Islands</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-UG"
+                    data-country-code="UG"
+                    data-country-name="Uganda"
+                    data-country-name-local="Uganda"
+                    data-country-id="13"
+                    >Uganda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-UA"
+                    data-country-code="UA"
+                    data-country-name="Ukraine"
+                    data-country-name-local="Ukraine"
+                    data-country-id="135"
+                    >Ukraine</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-AE"
+                    data-country-code="AE"
+                    data-country-name="United Arab Emirates"
+                    data-country-name-local="United Arab Emirates	"
+                    data-country-id="192"
+                    >United Arab Emirates
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-GB"
+                    data-country-code="GB"
+                    data-country-name="United Kingdom"
+                    data-country-name-local="United Kingdom"
+                    data-country-id="153"
+                    >United Kingdom</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-US"
+                    data-country-code="US"
+                    data-country-name="United States of America"
+                    data-country-name-local="United States of America"
+                    data-country-id="79"
+                    >United States of America</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-UY"
+                    data-country-code="UY"
+                    data-country-name="Uruguay"
+                    data-country-name-local="Uruguay"
+                    data-country-id="92"
+                    >Uruguay</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-UZ"
+                    data-country-code="UZ"
+                    data-country-name="Uzbekistan"
+                    data-country-name-local="Uzbekistan"
+                    data-country-id="102"
+                    >Uzbekistan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VU"
+                    data-country-code="VU"
+                    data-country-name="Vanuatu"
+                    data-country-name-local="Vanuatu"
+                    data-country-id="201"
+                    >Vanuatu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VA"
+                    data-country-code="VA"
+                    data-country-name="Vatican City"
+                    data-country-name-local="Vatican City	"
+                    data-country-id="232"
+                    >Vatican City
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VE"
+                    data-country-code="VE"
+                    data-country-name="Venezuela"
+                    data-country-name-local="Venezuela"
+                    data-country-id="93"
+                    >Venezuela</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-VN"
+                    data-country-code="VN"
+                    data-country-name="Vietnam"
+                    data-country-name-local="Vietnam"
+                    data-country-id="120"
+                    >Vietnam</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-WF"
+                    data-country-code="WF"
+                    data-country-name="Wallis and Futuna"
+                    data-country-name-local="Wallis and Futuna"
+                    data-country-id="242"
+                    >Wallis and Futuna</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-YE"
+                    data-country-code="YE"
+                    data-country-name="Yemen"
+                    data-country-name-local="Yemen"
+                    data-country-id="193"
+                    >Yemen</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ZM"
+                    data-country-code="ZM"
+                    data-country-name="Zambia"
+                    data-country-name-local="Zambia"
+                    data-country-id="14"
+                    >Zambia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="st-country-option st-country-ZW"
+                    data-country-code="ZW"
+                    data-country-name="Zimbabwe"
+                    data-country-name-local="Zimbabwe"
+                    data-country-id="15"
+                    >Zimbabwe</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                ><i class="icon-language"></i> English<span class="ga-caret"></span
+              ></a>
+              <!-- locales -->
+              <ul class="dropdown-menu">
+                <li><a href="/ar/" class="st-language-option">العربية</a></li>
+                <li><a href="/zh/" class="st-language-option">简体中文</a></li>
+                <li><a href="/zt/" class="st-language-option">繁體中文</a></li>
+                <li><a href="/cs/" class="st-language-option">čeština</a></li>
+                <li><a href="/fr/" class="st-language-option">français</a></li>
+                <li><a href="/de/" class="st-language-option">Deutsch</a></li>
+                <li><a href="/he/" class="st-language-option">עברית</a></li>
+                <li><a href="/ja/" class="st-language-option">日本語</a></li>
+                <li><a href="/pt/" class="st-language-option">português</a></li>
+                <li><a href="/ru/" class="st-language-option">русский</a></li>
+                <li><a href="/es/" class="st-language-option">español</a></li>
+                <li><a href="/tr/" class="st-language-option">Türk</a></li>
+              </ul>
+            </li>
+          </ul>
+          <br class="hide-sm" />
+          <ul class="nav navbar-nav navbar-right st-main-links">
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">
+                <i class="icon-pricing"></i>Getting Started
+                <span class="ga-caret hide-lg"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#rewards">example For Me</a></li>
+                <li><a href="#for-business">example For Business</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">
+                <i class="icon-services"></i>Our Services
+                <span class="ga-caret hide-lg"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#services/shopping-assistance">Assisted Purchase</a></li>
+                <li><a href="#consolidation_landing">Consolidation</a></li>
+                <li><a href="#services/fast-mailout">Fast Mailout</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">
+                <i class="icon-help"></i>Help
+                <span class="ga-caret hide-lg"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#free-us-address">How It Works</a></li>
+                <li><a href="#help/faq">Frequently Asked Questions</a></li>
+                <li><a href="#help/tutorials/prohibited-items">Prohibited &amp; Limited Items</a></li>
+                <li><a href="#ship-perfume">Shipping Perfume</a></li>
+                <li><a href="#help/postage">Shipping Methods</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">
+                <i class="icon-about-us"></i>About Us
+                <span class="ga-caret hide-lg"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#services/what-is-example">What Is example</a></li>
+                <li><a href="#help/cost-effective">Why We Are Cost Effective</a></li>
+                <li><a href="#reviews">Customer Reviews</a></li>
+                <li><a href="#help/locations">Warehouse Locations</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" data-toggle="dropdown">
+                <i class="icon-partners"></i>Partners
+                <span class="ga-caret hide-lg"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#affiliates">Affiliate Program</a></li>
+                <li><a href="#for-direct-sales">Direct Sellers</a></li>
+              </ul>
+            </li>
+            <li class="hide-sm"><a href="#account" class="btn btn-secondary btn-login">Login</a></li>
+            <li class="hide-sm"><a href="#signup" class="btn btn-primary">Sign Up</a></li>
+            <li class="dropdown hide-lg">
+              <a class="dropdown-toggle contact-sm-link" data-toggle="dropdown" href="#"
+                ><i class="icon-contact-us"></i> Customer Service <span class="ga-caret"></span
+              ></a>
+              <div class="dropdown-menu contact-sm">
+                <div class="contact">
+                  <a href="#contact"><i class="icon-contact-us"></i> Contact Us</a>
+                </div>
+                <div class="contact">
+                  <a href="mailto:support@example.com"
+                    ><img src="../imgs/navigation/email.svg" height="20" width="20" class="hide-sm" /><img
+                      src="../imgs/navigation/emailm.svg"
+                      height="20"
+                      width="20"
+                      class="hide-lg"
+                    />
+                    support@example.com</a
+                  >
+                </div>
+                <div class="contact">
+                  <img src="../imgs/navigation/livechat.svg" height="20" width="20" class="hide-sm" /><img
+                    src="../imgs/navigation/livechatm.svg"
+                    height="20"
+                    width="20"
+                    class="hide-lg"
+                  />
+                  Live chat: from 4 a.m. at 6 p.m. Monday to Saturday and Sunday from 4 a.m. at 3 p.m., Pacific time
+                  zone (U.S.)
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="row hide-lg">
+            <div class="col-xs-12 text-center sm-icons sm-icons-en">
+              <a href="#" target="_blank"><i class="icon-facebook"></i></a>
+              <a href="#" target="_blank"><i class="icon-twitter"></i></a>
+              <a href="#" target="_blank"><i class="icon-youtube"></i></a>
+              <a href="#" target="_blank"><i class="icon-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- body: main -->
+    <div class="main-body">
+      <style type="text/css">
+        .top-banner-outer {
+          background-image: url('../imgs/assistedpurchase/banner.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .heading {
+          display: block;
+          text-align: center;
+          font-size: 30px;
+          font-weight: 300;
+          color: #000000;
+          margin: 0px 0px 50px 0px;
+        }
+        .common-text {
+          font-size: 16px;
+          line-height: 1.7em;
+          color: #000;
+        }
+        .common-text.body {
+          margin-bottom: 40px;
+        }
+        .common-text IMG {
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+        .numbered-section-heading .common-text IMG {
+          margin-top: -11px;
+          margin-bottom: 0px;
+        }
+        .common-text STRONG {
+          color: var(--primary-0);
+          font-weight: 300;
+        }
+        .numbered-section-heading {
+          margin: 60px 0px 40px 0px;
+        }
+        .numbered-section-heading IMG {
+          background-color: var(--primary-0);
+          max-height: 50px;
+          margin-right: 20px;
+        }
+        .numbered-section-heading IMG.no-bg {
+          background-color: transparent;
+          max-height: 40px;
+          max-width: 40px;
+          margin-top: -8px;
+          display: inline;
+        }
+        .numbered-section-body {
+          margin: 0px 60px 0px 60px;
+        }
+        .we-shop-for-you {
+          margin: 0px 60px 0px 60px;
+        }
+        .we-shop-for-you P {
+          padding-top: 30px;
+        }
+        .first-time-heading {
+          margin-top: 60px;
+        }
+        .first-time-heading .btn {
+          margin-top: 30px;
+          text-transform: uppercase;
+          padding: 15px 30px 15px 30px;
+        }
+        .numbered-section-body label {
+          margin: 20px 0px 40px 0px;
+          color: var(--gray-5);
+        }
+        .numbered-section-body UL.blue-bullets LI {
+          margin-bottom: 5px;
+        }
+        .more-details {
+          margin-top: 60px;
+        }
+
+        .more-details label {
+          margin-bottom: 40px;
+          font-weight: 600px;
+        }
+        .more-details ul.blue-bullets li {
+          margin-bottom: 5px;
+        }
+
+        p.blurb {
+          margin: 20px 0px 40px 0px;
+          text-align: center;
+          color: var(--primary-0);
+        }
+
+        .stacked-images .nopad {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        .stacked-images {
+          margin-bottom: 80px;
+        }
+
+        a.more-info {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+        }
+        .more-info img {
+          max-height: 22px;
+          margin-top: -5px;
+        }
+
+        .popover {
+          border-color: var(--primary-0);
+          font-family: Montserrat, sans-serif;
+          min-width: 400px;
+        }
+        .popover.bottom > .arrow {
+          border-bottom-color: var(--primary-0) !important;
+        }
+
+        .popover-content {
+          color: var(--gray-5);
+        }
+        .popover-content .more-info-div {
+          width: 93%;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 14px;
+        }
+        .popover-content .more-info-header {
+          line-height: 22px;
+          border-bottom: 1px solid var(--gray-8);
+          padding-bottom: 3px;
+        }
+        .popover-content .more-info-line {
+          padding-top: 3px;
+        }
+        .popover-content .more-info-footer {
+          margin-top: 5px;
+          line-height: 22px;
+          border-top: 1px solid var(--gray-8);
+          padding-bottom: 8px;
+        }
+
+        .paymethod {
+          font-size: 12px;
+          text-align: center;
+          margin-top: 20px;
+        }
+        .paymethod IMG {
+          max-width: 150px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 12px;
+          padding: 0px;
+        }
+
+        @media (max-width: 47.9375rem) {
+          body {
+            cursor: pointer;
+          }
+          .top-banner-outer {
+            background-image: url('../imgs/asssistedpurchase/bannerm.png');
+            background-size: cover;
+          }
+          .top-banner-outer {
+            margin-bottom: 45px;
+          }
+          .heading {
+            margin-bottom: 40px;
+          }
+          .we-shop-for-you {
+            margin: 0px;
+          }
+          .we-shop-for-you p {
+            padding-top: 0px;
+            margin-bottom: 40px;
+          }
+          .we-shop-for-you .img-col {
+            padding: 0px;
+          }
+          .numbered-section-body {
+            margin: 0px;
+          }
+          .numbered-section-body .col-xs-12 img {
+            margin: 30px auto 30px auto;
+          }
+          .numbered-section-body p.common-text {
+            margin: 40px 15px 30px 15px;
+          }
+          .numbered-section-body img.img-responsive {
+            margin: 30px auto 30px auto;
+            max-width: 60%;
+          }
+          .numbered-section-body .paymethod img.img-responsive {
+            margin: 0px auto 0px auto;
+          }
+          .numbered-section-heading {
+            margin: 40px 0px 0px 0px;
+            padding-left: 60px;
+          }
+          .numbered-section-heading img {
+            margin: 0px 15px 0px -50px;
+            max-width: 30px;
+            background-color: transparent;
+            background-image: none;
+          }
+          .numbered-section-heading .common-text img {
+            margin-top: -5px;
+            max-width: 30px;
+            background-color: transparent;
+            background-image: none;
+          }
+          p.blurb {
+            margin: 50px 0px 20px 0px;
+          }
+          .stacked-images {
+            margin-bottom: 0px;
+          }
+          .popover {
+            border-color: var(--primary-0);
+            font-family: Montserrat, sans-serif;
+          }
+
+          .numbers {
+            display: inline-block;
+            width: 24px;
+            line-height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 18px;
+            border: none;
+            margin-right: 10px;
+            margin-left: -50px;
+          }
+        }
+      </style>
+      <div class="container-fluid top-banner-outer">
+        <div class="container top-banner-inner">
+          <h1>Assisted Purchase</h1>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="heading">We shop for you</h2>
+        <div class="we-shop-for-you">
+          <div class="row">
+            <div class="col-sm-4 hide-sm">
+              <img src="../imgs/assistedpurchase/worker1.jpg" class="img-responsive" />
+            </div>
+            <div class="col-sm-8 col-xs-12">
+              <p class="common-text">
+                We shop for you. If you have trouble ordering online we can shop on your behalf. We are able to purchase
+                many hard to get products from various online retailers. You will pay using your Shipito account and we
+                will purchase what you need.
+              </p>
+            </div>
+            <div class="col-sm-4 col-xs-12 hide-lg img-col">
+              <img src="../imgs/assistedpurchase/worker1.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+
+        <div class="first-time-heading">
+          <div class="row">
+            <div class="col-sm-3 hide-sm"></div>
+            <div class="col-xs-12 col-sm-6 text-center">
+              <p>
+                Welcome to our service! Is this is your first time requesting an Assisted Purchase? We are here to help.
+              </p>
+              <a href="#" class="scrolling-link btn btn-secondary" data-target="first-time-details"> Learn more </a>
+            </div>
+            <div class="col-sm-3 hide-sm"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/number1.png" class="hide-sm" />
+              <img src="../imgs/assistedpurchase/circle1.svg" class="hide-lg" />
+              It's simple! Tell us what you want and sit back and wait for your package to get to your Shipito account.
+            </p>
+          </div>
+        </div>
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <img src="../imgs/assistedpurchase/step1.svg" class="img-responsive" />
+            </div>
+            <div class="col-sm-8">
+              <p class="common-text body">
+                Click on Assisted Purchase after you login into your account. Then click on New Assisted Purchase. Give
+                us a description, quantity of item desired, product number, and total price including shipping to our
+                warehouse. You can do this by placing your selected items into a shopping cart on your favorite website,
+                go to checkout, enter our shipping address and this will give you the total cost. You will then enter
+                all that information into the form and click Next,
+              </p>
+              <p class="common-text">
+                Place an order on Amazon for example:
+                <br /><br />
+                Copy the URL
+                <img src="../imgs/assistedpurchase/ss1.png" class="img-responsive hide-sm" />
+                <img src="../imgs/assistedpurchase/ss1m.png" class="img-responsive hide-lg" />
+              </p>
+              <p class="common-text">
+                Paste the URL and fill out the form:
+                <img src="../imgs/assistedpurchase/ss2.png" class="img-responsive hide-sm" />
+                <img src="../imgs/assistedpurchase/ss2m.png" class="img-responsive hide-lg" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/number2.png" class="hide-sm" />
+              <img src="../imgs/assistedpurchase/circle2.svg" class="hide-lg" />
+              We will check availability and purchase products.
+            </p>
+          </div>
+        </div>
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <img src="../imgs/assistedpurchase/step2.svg" class="img-responsive" />
+            </div>
+            <div class="col-sm-8">
+              <p class="common-text body">
+                When we go to complete your purchase, we will check the availability and pricing. If the information and
+                prices align with the information provided within your Assisted Purchase request, the order will be
+                placed. If the items are not available, or the prices are higher than what was submitted, we will reach
+                out to you via your Shipito account informing you of any discrepancies.
+              </p>
+              <p class="common-text">
+                We allow up to a <strong>$10 USD</strong> overage for any Assisted Purchase. This means, that if your
+                purchase is more than the amount you have paid, we will still complete your purchase, up to
+                <strong>$10 USD</strong> over the amount deposited. This will appear as a negative balance in your
+                Shipito account. If the price exceeds the <strong>$10 USD</strong> overage allowance, you will be
+                contacted regarding how to proceed.
+                <img src="../imgs/assistedpurchase/ss3.png" class="img-responsive hide-sm" />
+                <img src="../imgs/assistedpurchase/ss3m.png" class="img-responsive hide-lg" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/number3.png" class="hide-sm" />
+              <img src="../imgs/assistedpurchase/circle3.svg" class="hide-lg" />
+              Once we receive the item we place it into your suite for you to ship whenever you are ready.
+            </p>
+          </div>
+        </div>
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <img src="../imgs/assistedpurchase/step3.svg" class="img-responsive" />
+            </div>
+            <div class="col-sm-8">
+              <p class="common-text body">
+                Once your package has been delivered, we will inspect the items to ensure the order is correct and
+                nothing was damaged in transit. Once this inspection has been completed, your package will be placed
+                into your Shipito account and you will be notified. You will then be able to schedule mail out for your
+                package to your destination of choice and shipping charges for this service will be applied upon mail
+                out.
+                <img src="../imgs/assistedpurchase/ss4.png" class="img-responsive hide-sm" />
+                <img src="../imgs/assistedpurchase/ss4m.png" class="img-responsive hide-lg" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="common-text body">
+                Once your Assisted Purchase arrives, you will receive a notification that it has been added to your
+                suite. Then you can log in, fill out your customs form, choose your method of shipping, pay for the
+                shipping and any applicable fees. You package will soon be on its way to your home. <br /><br />
+                Should the product you receive require warranty claims there is a $10 charge for assistance. Please
+                contact customer service with your request <strong>Support@shipito.com</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>How much does it cost to ship a package? - You Shop for You</label>
+              <p>
+                It costs $3 USD processing fee for Free Account or $2 USD processing fee for the Premium Account+ the
+                shipping rate <a href="../shipping-calculator">*</a>. Check out our
+                <a href="../shipping-calculator">Shipping Calculator</a> to view shipping rates.
+              </p>
+
+              <strong>*</strong> The cost to use our service if you buy the package yourself and ship it to us is as
+              follows:
+              <ul class="blue-bullets">
+                <li>$3 USD processing fee for Free Account or $2 USD processing fee for the Premium Account</li>
+                <li>
+                  Shipping Fee which will depend on the weight of the package and the delivery service your choose.
+                </li>
+                <li>
+                  VAT, GST, or duties for the country you ship it to. Some countries and services require you to pay
+                  this in advance. Others require you to pay the fees when your package arrives in your country.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>
+                How much does it cost to ship a package? - We Shop for You (Assisted Purchase)
+                <a
+                  class="more-info"
+                  data-toggle="popover"
+                  data-trigger="hover"
+                  data-placement="bottom"
+                  data-content='
+          <DIV CLASS="more-info-div">
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-12 text-left more-info-header">
+              <STRONG>Example<BR>Total Cost Overview</STRONG></DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Cost of goods purchased</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$59.99</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Shipping to Warehouse</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$7.50</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Domestic Tax</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$4.26</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Assisted Purchase Fee</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$8.50</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Bank Processing Fee</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$3.09</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Shipito Commission</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$5.74</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Package Processing Fee</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$2.00</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-9 text-left more-info-line">Shipping to your home*</DIV>
+              <DIV CLASS="col-md-3 text-right more-info-line">$?</DIV>
+            </DIV>
+            <DIV CLASS="row more-info-footer">
+              <DIV CLASS="col-md-12 text-right more-info-line">Total:&nbsp;&nbsp; $91.08 USD +*</DIV>
+            </DIV>
+            <DIV CLASS="row">
+              <DIV CLASS="col-md-12 text-left more-info-line">
+              * Shipping charges will depend on weight of packages, carrier chosen to ship, and any fees or VAT applied by your country.
+              </DIV>
+            </DIV>
+          '
+                  data-original-title=""
+                  title=""
+                >
+                  <img src="../imgs/navigation/exclamation.svg" />
+                </a>
+              </label>
+              <ul class="blue-bullets">
+                <li>Cost of Goods Purchased</li>
+                <li>Shipping costs from seller (Shipping to Warehouse)</li>
+                <li>Sales tax (Domestic Tax)</li>
+                <li><strong>$8.50 USD</strong> Assisted Purchase Fee</li>
+                <li>Bank Fee (Processing Fee - <strong>4.3%</strong> )</li>
+                <li>Shipito Commission (<strong>8 %</strong> of purchase cost)</li>
+                <li>$3 USD processing fee for Free Account or $2 USD processing fee for the Premium Account</li>
+                <li>
+                  Shipping Fee which will depend on the weight of the package and the delivery service your choose.
+                </li>
+                <li>
+                  VAT, GST, or duties for the country you ship it to. Some countries and services require you to pay
+                  this in advance. Others require you to pay the fees when your package arrives in your country.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>How long does it take?</label>
+              <p class="common-text body">
+                Assisted Purchase completion times vary due to several factors. If this is your first Assisted Purchase
+                with Shipito, you will need to verify your ID and method of payment before we can process your request.
+                The ID and payment verification process can take up to 2 weeks to complete, so plan ahead. Assisted
+                Purchase requests around busy shopping times such as Black Friday and Cyber Monday may take longer due
+                to higher demand. Additionally, not all merchants send items the same day it is purchased nor by express
+                shipping. Planning ahead provides the greatest chance that your item will arrive in time for a special
+                event or holiday!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="first-time-details"></div>
+        <h2 class="section-title">
+          <span>First Time Customer ID Verification</span>
+        </h2>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="common-text body" style="margin-bottom: 0px">
+                You don't like fraud and neither do we, so first time Assisted Purchase requests require identify and
+                payment verification method before we can get started. The verification process is simple:
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/circle1.svg" class="hide-sm no-bg" />
+              <span class="hide-lg numbers">1.</span> Select Assisted Purchase and follow the prompts
+            </p>
+          </div>
+        </div>
+
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-sm-2 hide-sm">
+              <!--  -->
+            </div>
+            <div class="col-sm-8">
+              <p class="common-text">
+                <img src="../imgs/assistedpurchase/selectap.png" class="img-responsive hide-sm" />
+                <img src="../imgs/assistedpurchase/selectapm.png" class="img-responsive hide-lg" />
+              </p>
+            </div>
+            <div class="col-sm-2 hide-sm">
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/circle2.svg" class="hide-sm no-bg" />
+              <span class="hide-lg numbers">2.</span> Provide 2 types of requested ID's and documents
+            </p>
+          </div>
+        </div>
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-xs-4 paymethod text-center">
+              <img src="../imgs/assistedpurchase/passport.svg" class="img-responsive" />
+              Passport
+            </div>
+            <div class="col-xs-4 paymethod text-center">
+              <img src="../imgs/assistedpurchase/id.svg" class="img-responsive" />
+              Identity Card
+            </div>
+            <div class="col-xs-4 paymethod text-center">
+              <img src="../imgs/assistedpurchase/license.svg" class="img-responsive" />
+              Drivers License
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 numbered-section-heading">
+            <p class="common-text">
+              <img src="../imgs/assistedpurchase/circle3.svg" class="hide-sm no-bg" />
+              <span class="hide-lg numbers">3.</span> Verify your method of payment
+            </p>
+          </div>
+        </div>
+        <div class="numbered-section-body">
+          <div class="row">
+            <div class="col-xs-4 paymethod">
+              <img src="../imgs/assistedpurchase/credit.svg" class="img-responsive" />
+              Credit Card<br />(Preferred)
+            </div>
+
+            <div class="col-xs-4 paymethod">
+              <img src="../imgs/assistedpurchase/bitpay.svg" class="img-responsive" />
+              BitPay
+            </div>
+            <div class="col-xs-4 paymethod">
+              <img src="../imgs/assistedpurchase/wire.svg" class="img-responsive" />
+              Wire Transfer
+            </div>
+          </div>
+        </div>
+
+        <div class="more-details">
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="common-text body">
+                Once you've followed these steps our security team will perform a few checks to confirm that you are. .
+                . well,... you! The verification progress can usually be done within a few days, but may take up to 2
+                weeks during busier times of the year. Once your account has been approved for Assisted Purchase, you
+                don't need to go through the ID verification process again. Plan ahead if you would like Shipito to
+                purchase an item for a sale or holiday!
+              </p>
+              <p class="common-text body">
+                If you are unable to add a verified credit card we will require additional documentation such as bank
+                statements and receipts to prove ownership of the payment method.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <p class="blurb">Tell us what you want and we'll shop for you!</p>
+          </div>
+        </div>
+
+        <div class="row stacked-images">
+          <div class="col-sm-4 col-xs-12 nopad">
+            <img src="../imgs/assistedpurchase/worker2.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-4 col-xs-12 nopad">
+            <img src="../imgs/assistedpurchase/worker3.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-4 col-xs-12 nopad">
+            <img src="../imgs/assistedpurchase/worker4.png" class="img-responsive" />
+          </div>
+        </div>
+      </div>
+
+      <div class="signup-banner">
+        <div class="container">
+          <div class="text-center">
+            <div>Start Saving Today!</div>
+          </div>
+          <div class="text-center us-address">
+            <div>Get your free U.S. address!</div>
+          </div>
+          <div class="text-center">
+            <div><a href="#" class="btn">sign up free</a></div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('[data-toggle="popover"]').popover({ html: true });
+          $('.scrolling-link').click(function (evt) {
+            var top = 130;
+            if ($(window).width() <= 767) top = 30;
+            var target = $(this).attr('data-target');
+            var targettop = $('#' + target).offset().top - top;
+            $('html,body').animate({ scrollTop: targettop }, 1000);
+            return false;
+          });
+        });
+      </script>
+    </div>
+
+    <!-- footer: top -->
+    <footer class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-xs-6 text-center advantage">
+            <span class="advantage-image"><img src="../imgs/navigation/pricing.svg" /></span>
+            <span class="advantage-service">example's Competitive Pricing</span>
+            <span class="advantage-description"
+              >We offer the best competitive prices to save you on shipping rates.</span
+            >
+          </div>
+          <div class="col-md-3 col-xs-6 text-center advantage">
+            <span class="advantage-image"><img src="../imgs/navigation/delivery.svg" /></span>
+            <span class="advantage-service">International Delivery</span>
+            <span class="advantage-description"
+              >We offer one of the best shipping solutions for international shipping</span
+            >
+          </div>
+          <div class="col-md-3 col-xs-6 text-center advantage">
+            <span class="advantage-image"><img src="../imgs/navigation/payment.svg" /></span>
+            <span class="advantage-service">Secure Payment Methods</span>
+            <span class="advantage-description">Pay with peace of mind with our Safe Pay systems</span>
+          </div>
+          <div class="col-md-3 col-xs-6 text-center advantage">
+            <span class="advantage-image"><img src="../imgs/navigation/safety.svg" /></span>
+            <span class="advantage-service">Shop Safely</span>
+            <span class="advantage-description"
+              >Shop with us knowing that we are protecting your account around the clock</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer: bottom -->
+    <footer class="bottom-footer">
+      <div class="container">
+        <div class="row hide-sm">
+          <div class="col-md-2 col-xs-6">
+            <label>Our Services</label>
+            <a href="#pricing">Plans &amp; Pricing</a>
+            <a href="#services">Assisted Purchase</a>
+            <a href="#consolidation_landing">Consolidation</a>
+            <a href="#us-unlocked">US Unlocked</a>
+          </div>
+          <div class="col-md-2 col-xs-6">
+            <label>Help</label>
+            <a href="#forwarding-service">How It Works</a>
+            <a href="#help/faq">Frequently Asked Questions</a>
+            <a href="#help">Prohibited &amp; Limited Items</a>
+            <a href="#help">Shipping Methods</a>
+            <a href="#shipping-calculator">Shipping Calculator</a>
+          </div>
+          <div class="col-md-2 col-xs-6">
+            <label>About Us</label>
+            <a href="#services/what-is-example">What Is example</a>
+            <a href="#help">Why We Are Cost Effective</a>
+            <a href="#reviews">Customer Reviews</a>
+            <a href="#help">Warehouse Locations</a>
+            <a href="#blog">Blog</a>
+          </div>
+          <div class="col-md-2 col-xs-6">
+            <label>Partners</label>
+            <a href="#affiliates">Affiliate Program</a>
+            <a href="#for-direct-sales">Direct Sellers</a>
+          </div>
+          <div class="col-md-4 col-xs-6">
+            <label>Customer Service</label>
+            <div class="contact">
+              <a href="#"><i class="icon-contact-us"></i> Contact Us</a>
+            </div>
+            <div class="contact">
+              <a href="mailto:"
+                ><img src="../imgs/navigation/email.svg" height="20" width="20" class="hide-sm" /><img
+                  src="../imgs/navigation/emailm.svg"
+                  height="20"
+                  width="20"
+                  class="hide-lg"
+                />
+                support@example.com</a
+              >
+            </div>
+            <div class="contact">
+              <img src="../imgs/navigation/livechat.svg" height="20" width="20" class="hide-sm" /><img
+                src="../imgs/navigation/livechatm.svg"
+                height="20"
+                width="20"
+                class="hide-lg"
+              />
+              Live chat: from 4 a.m. at 6 p.m. Monday to Saturday and Sunday from 4 a.m. at 3 p.m., Pacific time zone
+              (U.S.)
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 pull-right sm-icons sm-icons-en text-right">
+            <label>&nbsp;</label>
+            <a href="#" target="_blank"><i class="icon-facebook"></i></a>
+            <a href="#" target="_blank"><i class="icon-twitter"></i></a>
+            <a href="#" target="_blank"><i class="icon-youtube"></i></a>
+            <a href="#" target="_blank"><i class="icon-instagram"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center privacy">
+            <a href="#privacy-policy">Privacy Policy</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#terms">Terms and Conditions</a>
+            <br />
+            Copyright © 2022 example. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#page-top" class="back-to-top-link" title="Back To Top">
+      <img src="../imgs/navigation/backtotop.svg" />
+    </a>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 500,
+        easing: 'ease-in-quad',
+        delay: 100,
+        disable: 'mobile',
+      });
+      $('#carousel-full').carousel('pause');
+      $('#carousel-mobile').carousel('pause');
+      $('#carousel-popular').carousel('pause');
+
+      function gaPopUpDisplay(lnk) {
+        let popup =
+          '<div class= "modal popup fade" ID = "popup" role = "dialog">' +
+          '	 <div class= "modal-dialog modal-lg">' +
+          '      <div class= "modal-content" ID = "popupcontent">' +
+          '  	  </div>' +
+          '	 </div>' +
+          '	</div>';
+        if (!document.getElementById('popup')) $('body').append(popup);
+        let loading =
+          '	   <div class= "modal-body">' +
+          '	    <span>' +
+          '	     <i class= "fa fa-spinner fa-spin fa-3x fa-fw"></i> ' +
+          'Loading . . .' +
+          '        </span>' +
+          '	   </div>' +
+          '	   <div class= "modal-footer">' +
+          '        <button TYPE = "button" class= "btn btn-default" data-dismiss = "modal">Close</button>' +
+          '	   </div>';
+
+        $('#popupcontent').html(loading);
+        $('#popup').modal({ backdrop: 'static', keyboard: false, show: true });
+        $('#popupcontent').load(lnk.href, function (response, status, xhr) {
+          if (status == 'error') {
+            let msg = '<H1>ERROR:</H1> ';
+            $('#popupcontent').html(msg + xhr.status + ' ' + xhr.statusText);
+          }
+        });
+        return false;
+      }
+    </script>
+    <script src="../scripts/countrypicker.js"></script>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

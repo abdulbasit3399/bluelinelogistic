@@ -1,0 +1,31 @@
+<?php
+
+return [
+    
+    'home' => 'Home',
+    'you' => 'You',
+    'tags' => 'Tags',
+    'share' => 'Share',
+    'pervious_article' => 'Pervious article',
+    'next_article' => 'Next article',
+    'related_article' => 'Related Articles',
+    'comments' => 'Comments',
+    'view_prev_comments' => 'View previous comments',
+    'view_prev_replies' => 'View previous replies',
+    'waiting_for_approval' => 'Waiting for approval',
+    'reply' => 'Reply',
+    'reply_to' => 'Reply to',
+    'leave_reply' => 'Leave a Reply',
+    'cancel_reply' => 'Cancel reply',
+    'msg_email_published' => 'Your email address will not be published.',
+    'fields_are_marked' => 'Required fields are marked',
+    'msg_save_author_data' => 'Save my name, email, and website in this browser for the next time I comment.',
+    'field_comment' => 'Comment',
+    'field_name' => 'Name',
+    'field_email' => 'Email',
+    'field_website' => 'Website',
+    'post_comment' => 'Post comment',
+    'new' => 'New',
+    'articles' => 'Articles',
+    'said' => 'said',
+];

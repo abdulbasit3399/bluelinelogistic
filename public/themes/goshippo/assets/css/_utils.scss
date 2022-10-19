@@ -1,0 +1,193 @@
+/*
+  line-height:
+  43px
+  36px
+  26px
+*/
+
+// font-size
+.fs {
+  &-xs-1 {
+    font-size: 1.1rem;
+  }
+  &-xs {
+    font-size: 1.2rem;
+  }
+  &-xs-2 {
+    font-size: 1.2rem;
+  }
+  &-xs-3 {
+    font-size: 1.3rem;
+  }
+  &-sm {
+    font-size: 1.4rem;
+  }
+  &-md {
+    font-size: 1.6rem;
+  }
+  &-lg {
+    font-size: 1.8rem;
+  }
+  &-xl {
+    font-size: 2.8rem;
+  }
+  &-2xl {
+    font-size: 3.8rem;
+  }
+  &-3xl {
+    font-size: 3.3rem;
+  }
+  &-4xl {
+    font-size: 4.8rem;
+  }
+}
+
+// font-family
+.ff {
+  &-default {
+    font-family: $base-ff !important;
+  }
+  &-header {
+    font-family: $header-ff;
+  }
+}
+
+// text color
+.text {
+  &-muted {
+    color: rgba($gray-1, 0.8) !important;
+  }
+  &-white {
+    color: $white !important;
+  }
+  &-dark {
+    color: $gray-1 !important;
+  }
+  &-light {
+    color: $light !important;
+  }
+}
+
+// button
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: $gray-1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: $rounded !important;
+  font-weight: 400;
+  transition: background-color $effect, color $effect, border-color $effect;
+  &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-lg {
+    padding: 1.5rem 5.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  &.btn-link {
+    background-color: transparent;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $link;
+    }
+  }
+  &.outline {
+    color: $gray-7;
+    border-color: $gray-1;
+  }
+  &.btn-primary {
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+    &:hover,
+    &:active {
+      background-color: $primary-hov !important;
+      border-color: $primary-hov !important;
+    }
+    &.outline:hover,
+    &.outline:active {
+      background-color: transparent !important; /* $white */
+      color: $gray-7;
+      border-color: $gray-1 !important;
+    }
+  }
+}
+
+// background-color
+.bg {
+  &-white {
+    background-color: $white !important;
+  }
+  &-dark {
+    background-color: $gray-1 !important;
+    color: $white;
+  }
+  &-light {
+    background-color: $light !important;
+  }
+}
+
+// shared
+a,
+a.link,
+.link {
+  font-weight: 700;
+  text-decoration: none;
+  color: $link;
+  // font-size: 1.6rem;
+  display: inline-block;
+  transition: color $effect;
+
+  &:hover,
+  &:focus {
+    color: $link-hov;
+  }
+}
+
+.rounded {
+  border-radius: $rounded !important;
+  &-full {
+    border-radius: $rounded-full !important;
+  }
+}
+
+@media only screen and (min-width: $screen-lg) {
+  .fs {
+    &-xs-1 {
+      font-size: 1.1rem;
+    }
+    &-xs {
+      font-size: 1.2rem;
+    }
+    &-xs-2 {
+      font-size: 1.2rem;
+    }
+    &-xs-3 {
+      font-size: 1.3rem;
+    }
+    &-sm {
+      font-size: 1.4rem;
+    }
+    &-md {
+      font-size: 1.6rem;
+    }
+    &-lg {
+      font-size: 2rem;
+    }
+    &-xl {
+      font-size: 3.2rem;
+    }
+    &-2xl {
+      font-size: 4.2rem;
+    }
+    &-3xl {
+      font-size: 4.8rem;
+    }
+    &-4xl {
+      font-size: 7rem;
+    }
+  }
+}

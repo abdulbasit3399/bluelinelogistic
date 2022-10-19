@@ -1,0 +1,28 @@
+$screen-sm: 36rem;
+$screen-md: 48rem;
+$screen-lg: 62rem;
+$screen-xl: 75rem;
+
+:root {
+  --base-fs: 1.5rem;
+}
+
+$white: #ffffff;
+$light: #e3e6e8;
+$gray-6: #6c757d;
+$gray-2: #212529;
+$black: #000000;
+$primary: #ae29d4;
+$primary-hov: #981cbb;
+
+$base-ff: sans-serif;
+$base-fw: 400;
+
+$shadow: 5px 5px 10px rgba($primary, 0.02);
+$shadow-lg: 0 40px 81px -16px rgba(50, 50, 93, 0.25), 0 24px 48px -24px rgba($black, 0.3);
+
+$effect: 0.5s;
+
+$rounded: 0.48rem;
+$rounded-lg: 0.8rem;
+$rounded-full: 9999px;

@@ -1,0 +1,28 @@
+
+// translation
+.btn-show-translate-fields {
+    .text-toggle.hide {
+        display: none;
+    }
+}
+.translate-field, .translate-label {
+    display: none;
+}
+
+
+
+// Editor quillj
+
+.editor_content_quillj {
+    min-height: 150px;
+    .ql-editor {
+        min-height: 150px;
+    }
+}
+
+.image-input {
+    background-color: #EEE;
+}
+.image-input .image-input-wrapper, .image-input {
+    background-size: 100% 100%;
+}

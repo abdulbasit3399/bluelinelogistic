@@ -1,0 +1,267 @@
+// small
+@media only screen and (min-width: $screen-sm) {
+  .section {
+    .container {
+      padding-top: 12rem;
+    }
+  }
+
+  #banner {
+    .container {
+      padding-top: 3rem;
+    }
+    .links-carousel {
+      padding: 0.5rem 1.8rem;
+      box-shadow: $shadow-2;
+      background-color: $white;
+      border-radius: $rounded-full !important;
+      .link {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+// medium
+@media only screen and (min-width: $screen-md) {
+  #main-header {
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color $effect, box-shadow $effect;
+    &.active {
+      box-shadow: $shadow-3;
+      top: 0px;
+      background-color: $white;
+    }
+  }
+  #banner {
+    .container {
+      padding-top: 6rem;
+    }
+    .slick {
+      &-dots {
+        display: block !important;
+        margin-inline: -1.5rem;
+        li {
+          margin: 0;
+          width: unset;
+          button {
+            margin-inline-end: 0.2rem;
+            height: 0.2rem;
+            width: 1rem;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .intro {
+      text-align: start;
+
+      .actions {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .btn {
+        margin-inline-end: 4rem;
+      }
+      .link {
+        margin-top: 0;
+      }
+    }
+    .wrapper {
+      width: 80%;
+    }
+    .links-carousel {
+      max-width: 55%;
+    }
+  }
+
+  #services {
+    .contents {
+      > * {
+        padding-inline: 1.5rem;
+      }
+    }
+    .card {
+      .title {
+        min-height: 4.4rem;
+      }
+      .text,
+      .link {
+        line-height: 2.6rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  #partners {
+    .row {
+      flex-direction: row;
+    }
+    .groups {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      min-width: 710px !important;
+      transform: translateX(-45%);
+      .group {
+        padding: 2rem;
+        margin: 0;
+        img {
+          min-width: 10rem;
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+
+    .intro {
+      text-align: start;
+      margin-bottom: 0;
+      .link {
+        display: block;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  #testimonials {
+    .contents {
+      .card {
+        padding-inline: 1.5rem;
+      }
+    }
+  }
+
+  #statistics {
+    .contents {
+      > .row {
+        padding-inline: 0;
+      }
+      .card {
+        padding: 4.1rem 4.5rem;
+        .title {
+          font-size: 4.8rem;
+        }
+        .sub {
+          font-size: 1.6rem;
+        }
+      }
+      .row {
+        &.cards {
+          row-gap: 4rem;
+          > * {
+            padding-inline: 2rem;
+          }
+        }
+        .highlight {
+          padding-inline-start: 2rem;
+          .card {
+            padding-block: 4.1rem;
+            .title {
+              font-size: 7rem;
+              line-height: 9rem;
+            }
+            .sub {
+              font-size: 4.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #brands {
+    .brands {
+      li {
+        img {
+          min-height: 4.8rem;
+          height: 4.8rem;
+          max-height: 5.2rem;
+        }
+      }
+    }
+  }
+
+  #subscribe {
+    .container {
+      margin-top: 12rem;
+    }
+    .intro {
+      .heading {
+        font-size: 4.2rem;
+      }
+    }
+  }
+}
+
+// large
+@media only screen and (min-width: $screen-lg) {
+  // shared
+  body {
+    line-height: 2.6rem;
+    font-size: 1.6rem;
+  }
+  .section {
+    .intro {
+      width: 590px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  #main-header {
+    &.active {
+      .navbar .auth .btn.highlight {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+        &:hover,
+        &:focus {
+          background-color: $primary-hov !important;
+          border-color: $primary-hov !important;
+          color: $white !important;
+        }
+      }
+    }
+    .navbar {
+      .auth {
+        .btn {
+          padding: 1rem 2rem;
+          font-size: 1.6rem;
+          &.highlight {
+            background-color: transparent;
+            border-color: $gray-1;
+            color: $gray-1;
+            &:hover,
+            &:focus {
+              color: $gray-9;
+            }
+          }
+        }
+      }
+    }
+  }
+  #banner {
+    .wrapper {
+      margin-top: 0;
+    }
+    .links-carousel {
+      max-width: 85%;
+    }
+  }
+  #partners {
+    .groups {
+      transform: translateX(-25%);
+    }
+  }
+}
+
+// extra-large
+@media only screen and (min-width: $screen-xl) {
+  #partners {
+    .groups {
+      transform: translateX(-100px);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./Modules/Localization/Resources/assets/js/search_filter_translations.js":
+/*!********************************************************************************!*\
+  !*** ./Modules/Localization/Resources/assets/js/search_filter_translations.js ***!
+  \********************************************************************************/
+/***/ (() => {
+
+var translationsSearch = $('#translations_search');
+translationsSearch.on('input', function (e) {
+  e.preventDefault();
+  var self = $(this),
+      searchValue = self.val().trim().toLowerCase(),
+      translationsCard = $('#translations_card'),
+      fieldTranslationClass = '.field-translation',
+      notMatchedSearch = $(fieldTranslationClass).filter(":not([data-phrase*=\"".concat(searchValue, "\"])"));
+  $(fieldTranslationClass).removeClass('hide-field'); // show all
+
+  if (searchValue != '') {
+    notMatchedSearch.addClass('hide-field'); // hide not matched only 
+  }
+});
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!*********************************************************!*\
+  !*** ./Modules/Localization/Resources/assets/js/app.js ***!
+  \*********************************************************/
+__webpack_require__(/*! ./search_filter_translations.js */ "./Modules/Localization/Resources/assets/js/search_filter_translations.js");
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=localization.js.map

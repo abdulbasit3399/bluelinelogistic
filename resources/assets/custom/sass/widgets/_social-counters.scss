@@ -1,0 +1,13 @@
+
+.social-counters-widget-form {
+    .remove-platform {
+        i {
+            transition: all 0.2s;
+        }
+        &:hover {
+            i {
+                color: #333;
+            }
+        }
+    }
+}
