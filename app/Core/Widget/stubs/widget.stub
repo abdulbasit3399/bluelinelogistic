@@ -1,0 +1,151 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Support\Facades\Validator;
+use App\Core\Widget\Template\Widget;
+
+class {{class}} extends Widget {
+
+    /**
+     * Visibility in widget list
+     */
+    public $publish = true; // if *true* will be show in widget list in admin page
+
+    /**
+     * widget id to save in database.
+     */
+    public $type = '{{widgetViewName}}'; // Example:  heading, table, paragraph, gallery, ads, list, video
+
+    /**
+     * widget id to save in database.
+     */
+    public $group = ''; // Example:  text, media
+
+    /**
+     * widget name to view in admin page.
+     */
+    public $name = '{{class}}'; // Example: Heading, Table, Paragraph, Gallery, Ads, List, Video
+
+    /**
+     * widget icon to view in admin page.
+     * Fontawesome 5 icons supported.
+     * soild icon only
+     */
+    public $icon = ''; // Example: heading, paragraph, list
+
+    /**
+     * widget description to view in admin page.
+     */
+    public $description = 'This widget {{widgetViewName}} to show in sidebar in frontend page.';
+
+
+    public function __construct()
+    {
+        $this->name = [
+            'en' => '{{class}}',
+            'ar' => '{{class}}'
+        ];
+        // you must be define name before run parent construct
+        parent::__construct();
+    }
+
+    /**
+     * View form in admin page.
+     *
+     * @param array $oldData
+     * @return View
+     */
+    public function form($oldData = [], $id = null)
+    {
+        return view('{{moduleViewPath}}widgets.{{widgetViewName}}.form')->with(['oldData' => $oldData]);
+    }
+
+    /**
+     * View in frontend page (in sidebar).
+     *
+     * @return View
+     */
+    public function view($id, $data)
+    {
+        return view('{{moduleViewPath}}widgets.{{widgetViewName}}.view')->with(['data' => $data]);
+    }
+
+
+
+    /**
+     * Maping data
+     * map data for passing to validation and store or update method 
+     * @param array $request
+     * @return array
+     */
+    public function mapData($request, $id = null)
+    {
+        return $request;
+    }
+
+    /**
+     * Handle creating data
+     * 
+     * Run this method when clicked on save when create new widget
+     * here handle and map your data to save in database
+     * examples: 
+     * upload image.
+     *
+     * @param collection $widget -> old object data from database 
+     * @param array $request -> form data
+     * @return array
+     */
+    public function store($request)
+    {
+        return $request;
+    }
+
+    /**
+     * Handle update data
+     * 
+     * Run this method when clicked on save
+     * here handle and map your data to save in database
+     * examples: 
+     * upload image.
+     * @param collection $widget -> old object data from database 
+     * @param array $request -> form data
+     * @return array
+     */
+    public function update($widget, $request)
+    {
+        return $request;
+    }
+
+    /**
+     * Validation data (Run automatically)
+     * 
+     * Remove it if you need not apply validations
+     * Use it when you need make validation in your data form
+     * @param array $data
+     * @return array|boolean
+     */
+    /*
+    public function validation($data, $id = null)
+    {
+        if ($id) { // run this validations when updating
+            $validation = Validator::make($data, [
+                'title' => 'required|string|max:100',
+            ]);
+        } else { // run this validations when creating
+            $validation = Validator::make($data, [
+                'title' => 'required|string|max:100',
+            ]);
+        }
+
+        // validate data
+        if ($validation->fails()) {
+            return $validation->errors();
+        } else {
+            return true;
+        }
+    }
+    */
+
+
+}
