@@ -117,8 +117,78 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
 @endif
 @endif
 {{--  <a href="https://fontawesome.com/search" target="_blank" class="btn btn-primary">Choose Icon</a>  --}}
-    <div class="row">
-        <h4 class="bl">Vault info</h4>
+
+<div class="row">
+    <h4 class="bl">User info</h4>
+    {{--  <div class="col-md-12">
+    <div class="form-group">
+        <label class="col-form-label fw-bold fs-6">Customer Address</label>
+        <textarea class="form-control" name="client_address">{{ old('Shipment.client_address', isset($model) ? $model->client_address : '') }}</textarea>
+    </div>
+    </div>  --}}
+    <div class="col-md-6 py-2">
+    <div class="form-group">
+        <label class="col-form-label fw-bold fs-6 required">Username</label>
+        <input type="text" value="{{ old('Shipment.vault_username', isset($model) ? $model->vault_username : '') }}" placeholder="Vault Username" id="v_username" name="vault_username" class="form-control @error('Shipment.vault_username') is-invalid @enderror" required />
+        @error('Shipment.vault_username')
+        <div class="invalid-feedback">
+        {{ $message }}
+        </div>
+        @enderror
+    </div>
+    </div>
+    <div class="col-md-6 py-2">
+    <div class="form-group">
+        <label class="col-form-label fw-bold fs-6 required">Password</label>
+        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
+        @error('Shipment.vault_password')
+        <div class="invalid-feedback">
+        {{ $message }}
+        </div>
+        @enderror
+    </div>
+    </div>
+
+
+
+    <div class="col-md-6 py-2">
+        <div class="form-group">
+        <label class="col-form-label fw-bold fs-6 required">Retype Password</label>
+        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
+        @error('Shipment.vault_password')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+        </div>
+    </div>
+    <div class="col-md-6 py-2">
+        <div class="form-group">
+        <label class="col-form-label fw-bold fs-6 required">Fullname</label>
+        <input type="text" value="{{ old('Shipment.user_fullname', isset($model) ? $model->user_fullname : '') }}" placeholder="Fullname" id="v_username" name="user_fullname" class="form-control @error('Shipment.user_fullname') is-invalid @enderror" required />
+        @error('Shipment.user_fullname')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+        </div>
+    </div>
+    <div class="col-md-6 py-2">
+        <div class="form-group">
+        <label class="col-form-label fw-bold fs-6 required">Email</label>
+        <input type="Email" value="{{ old('Shipment.user_email', isset($model) ? $model->user_email : '') }}" placeholder="Email" id="v_username" name="user_email" class="form-control @error('Shipment.user_email') is-invalid @enderror" required />
+        @error('Shipment.user_email')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+        <h4 class="bl mt-4">Vault info</h4>
 
       <div class="col-lg-12">
         <input type="hidden" name="Shipment[type]" value="3">
@@ -128,10 +198,12 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
         @endif
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 py-2">
                 <div class="form-group">
                   <label class="col-form-label fw-bold fs-6 required">Tracking no.</label>
-                  <input type="text" value="{{ old('Shipment.vault_number', isset($model) ? $model->vault_number : '') }}" placeholder="Vault Number" name="vault_number" required class="form-control @error('Shipment.vault_number') is-invalid @enderror" />
+                  <label class="badge bg-success btn-sm" type="button" id="gen1" onclick="random()">GENERATE</label>
+
+                  <input type="text" value="{{ old('Shipment.vault_number', isset($model) ? $model->vault_number : '') }}" placeholder="Vault Number" id="track" name="vault_number" required class="form-control @error('Shipment.vault_number') is-invalid @enderror" />
                   @error('Shipment.vault_number')
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -141,7 +213,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
             </div>
 
 
-          <div class="col-md-6">
+          <div class="col-md-6 py-2">
             <div class="form-group client-select">
               <label class="col-form-label fw-bold fs-6 required">{{ __('Name of Depositor') }}</label>
               @if($user_role == $auth_client)
@@ -179,74 +251,16 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
           </div>
         </div>
 
-        {{--  <div class="col-md-6">
-          <div class="form-group">
-            <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.client_phone') }}</label>
-
-            @if($user_role == $auth_client)
-            <input placeholder="{{ __('cargo::view.client_phone') }}" name="Shipment[client_phone]" id="client_phone" value="{{$userClient->responsible_mobile}}" class="form-control @error('Shipment.client_phone') is-invalid @enderror" />
-            @else
-            <input placeholder="{{ __('cargo::view.client_phone') }}" name="Shipment[client_phone]" id="client_phone" value="{{ old('Shipment.client_phone', isset($model) ? $model->client_phone : '' ) }}" class="form-control @error('Shipment.client_phone') is-invalid @enderror" />
-            @endif
-
-            @error('Shipment.client_phone')
-            <div class="invalid-feedback">
-              {{ $message }}
-            </div>
-            @enderror
-
-          </div>
-        </div>  --}}
-        {{--  uuiuiuiuiui  --}}
-        {{--  <div class="col-md-6">
-        <div class="form-group">
-            <label class="col-form-label fw-bold fs-6 required">{{ __('Item Description') }}</label>
-
-            @if($user_role == $auth_client)
-            <input type="text" placeholder="{{ __('Item Description') }}" name="item_des" id="item_des" value="{{$userClient->item_des}}" class="form-control @error('Shipment.item_des') is-invalid @enderror" />
-            @else
-            <input type="text" placeholder="{{ __('Item Description') }}" name="item_des" id="item_des" value="{{ old('Shipment.item_des', isset($model) ? $model->item_des : '' ) }}" class="form-control @error('Shipment.item_des') is-invalid @enderror" />
-            @endif
-
-            @error('Shipment.item_des')
-            <div class="invalid-feedback">
-            {{ $message }}
-            </div>
-            @enderror
-
-        </div>
-        </div>  --}}
-
-
-        {{--  <div class="col-md-6">
-        <div class="form-group">
-            <label class="col-form-label fw-bold fs-6 required">{{ __('Icon') }}</label>
-
-            @if($user_role == $auth_client)
-            <input placeholder="<i class=fa-solid> </i>" name="vault_icon" id="vault_icon" value="{{ old('Shipment.vault_icon', isset($model) ? $model->vault_icon : '' ) }}" class="form-control @error('Shipment.vault_icon') is-invalid @enderror" />
-            @else
-            <input placeholder="<i class=fa-solid> </i>" name="vault_icon" id="vault_icon" value="{{ old('Shipment.vault_icon', isset($model) ? $model->vault_icon : '' ) }}" class="form-control @error('Shipment.vault_icon') is-invalid @enderror" />
-            @endif
-
-            @error('Shipment.vault_icon')
-            <div class="invalid-feedback">
-            {{ $message }}
-            </div>
-            @enderror
-
-        </div>
-        </div>  --}}
-
-        <div class="col-md-6">
+        <div class="col-md-6 py-2">
         <div class="form-group">
             <label class="col-form-label fw-bold fs-6 required">{{ __('Next of Kin') }}</label>
 
             @if($user_role == $auth_client)
-            <input placeholder="{{ __('Next of Kin') }}" name="next_kin" id="next_kin" value="{{ old('Shipment.next_kin', isset($model) ? $model->next_kin : '' ) }}" class="form-control @error('Shipment.next_kin') is-invalid @enderror" />
+            <input placeholder="{{ __('Next of Kin') }}" name="next_kin" id="next_kin" required value="{{ old('Shipment.next_kin', isset($model) ? $model->next_kin : '' ) }}" class="form-control @error('Shipment.next_kin') is-invalid @enderror" />
             {{--  <input placeholder="{{ __('Next of Kin') }}" name="next_kin" id="next_kin" value="{{$userClient->next_kin}}" class="form-control @error('Shipment.next_kin') is-invalid @enderror" />  --}}
 
             @else
-            <input placeholder="{{ __('Next of Kin') }}" name="next_kin" id="next_kin" value="{{ old('Shipment.next_kin', isset($model) ? $model->next_kin : '' ) }}" class="form-control @error('Shipment.next_kin') is-invalid @enderror" />
+            <input placeholder="{{ __('Next of Kin') }}" name="next_kin" id="next_kin" required value="{{ old('Shipment.next_kin', isset($model) ? $model->next_kin : '' ) }}" class="form-control @error('Shipment.next_kin') is-invalid @enderror" />
             @endif
 
             @error('Shipment.next_kin')
@@ -257,9 +271,9 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
 
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 py-2">
             <div class="form-group">
-              <label class="col-form-label fw-bold fs-6 required">Shipment Status</label>
+              <label class="col-form-label fw-bold fs-6 required">Status</label>
               <select class="form-control select2" data-placeholder="Select Status"
                 data-allow-clear="true" data-control="select2" name="ship_status" required>
                 @if($typeForm == 'edit')
@@ -295,9 +309,9 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 py-2">
             <div class="form-group">
-              <label class="col-form-label fw-bold fs-6 required">Quantity</label>
+              <label class="col-form-label fw-bold fs-6 required">Good Quantity</label>
               <input type="text" value="{{ old('Shipment.quantity', isset($model) ? $model->quantity : '') }}" placeholder="Quantity" name="quantity" required class="form-control @error('Shipment.quantity') is-invalid @enderror" />
               @error('Shipment.quantity')
               <div class="invalid-feedback">
@@ -307,7 +321,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 py-2">
             <div class="form-group">
               <label class="col-form-label fw-bold fs-6 required">Arrears to be paid</label>
               <input type="text" value="{{ old('Shipment.arrears', isset($model) ? $model->arrears : '') }}" placeholder="Arrears" name="arrears" required class="form-control @error('Shipment.arrears') is-invalid @enderror" />
@@ -318,7 +332,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
               @enderror
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 py-2">
             <div class="form-group">
               <label class="col-form-label fw-bold fs-6 required">Date of Deposit</label>
               <input type="date" value="{{ old('Shipment.d_o_deposit', isset($model) ? $model->d_o_deposit : '') }}" placeholder="Date of Deposit" required name="d_o_deposit" class="form-control @error('Shipment.d_o_deposit') is-invalid @enderror" />
@@ -329,393 +343,9 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
               @enderror
             </div>
           </div>
-        {{--  <div class="col-md-12 d-none">
-          <div class="form-group">
-            <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.client_address') }}</label>
-            <select
-            id="client-addresses"
-            name="Shipment[client_address]" class="form-control select-address @error('Shipment.client_id') is-invalid @enderror"
-            >
-            <option value=""></option>
-            @if($typeForm == 'edit')
-            @foreach(Modules\Cargo\Entities\ClientAddress::where('client_id', $model->client_id)->where('is_archived',0)->get() as $address)
-            <option
-            value="{{$address->id}}"
-            {{ old('Shipment.client_address') == $address->id ? 'selected' : '' }}
-            @if($typeForm == 'edit')
-            {{ $model->client_address == $address->id ? 'selected' : '' }}
-            @endif
-            > {{$address->address}}</option>
-            @endforeach
-            @endif
 
-          </select>
-          @error('Shipment.client_id')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-      </div>  --}}
-
-      {{--  <div class="p-3 mb-4 mt-4 col-md-12" id="show_address_div" style="border: 1px solid #e4e6ef; display:none">
-        <div class="row">
-          @csrf
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.country') }}</label>
-              <select id="change-country-client-address" name="country_id" class="form-control select-country @error('country_id') is-invalid @enderror">
-                <option value=""></option>
-                @foreach($countries as $country)
-                <option value="{{$country->id}}">{{$country->name}}</option>
-                @endforeach
-              </select>
-              @error('country_id')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.region') }}</label>
-              <select @error('state_id') is-invalid @enderror id="change-state-client-address" name="state_id" class="form-control select-state">
-                <option value=""></option>
-
-              </select>
-              @error('state_id')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.area') }}</label>
-          <select @error('area_id') is-invalid @enderror name="area_id" style="display: block !important;" class="form-control select-area">
-            <option value=""></option>
-
-          </select>
-          @error('area_id')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.address') }}</label>
-          <input @error('client_address') is-invalid @enderror type="text" placeholder="{{ __('cargo::view.address') }}" name="client_address" class="form-control" />
-          @error('client_address')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-
-        <div class="mt-4">
-          <button type="submit" class="btn btn-primary" onclick="AddNewClientAddress()">{{ __('cargo::view.save') }}</button>
-          <button type="button" class="btn btn-secondary" onclick="closeAddressDiv()">{{ __('cargo::view.close') }}</button>
-        </div>
-      </div>  --}}
     </div>
 
-    <div class="vault_hide">
-
-  {{--  <div class="p-3 mb-4 mt-4 col-md-12 d-none" id="show_address_div" style="border: 1px solid #e4e6ef; display:none">
-    <div class="row">
-      @csrf
-      <div class="col-md-6">
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.country') }}</label>
-          <select id="change-country-client-address" name="country_id" class="form-control select-country @error('country_id') is-invalid @enderror">
-            <option value=""></option>
-            @foreach($countries as $country)
-            <option value="{{$country->id}}">{{$country->name}}</option>
-            @endforeach
-          </select>
-          @error('country_id')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.region') }}</label>
-          <select @error('state_id') is-invalid @enderror id="change-state-client-address" name="state_id" class="form-control select-state">
-            <option value=""></option>
-
-          </select>
-          @error('state_id')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.area') }}</label>
-      <select @error('area_id') is-invalid @enderror name="area_id" style="display: block !important;" class="form-control select-area">
-        <option value=""></option>
-
-      </select>
-      @error('area_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.address') }}</label>
-      <input @error('client_address') is-invalid @enderror type="text" placeholder="{{ __('cargo::view.address') }}" name="client_address" class="form-control" />
-      @error('client_address')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-    @if($googleMap)
-    <div class="location-client">
-      <label class="col-form-label fw-bold fs-6">{{ __('cargo::view.location') }}</label>
-      <input type="text" class="form-control address-client " placeholder="{{ __('cargo::view.location') }}" name="client_street_address_map"  rel="client" value="" />
-      <input type="hidden" class="form-control lat" data-client="lat" name="client_lat" />
-      <input type="hidden" class="form-control lng" data-client="lng" name="client_lng" />
-      <input type="hidden" class="form-control url" data-client="url" name="client_url" />
-
-      <div class="mt-2 col-sm-12 map_canvas map-client" style="width:100%;height:300px;"></div>
-      <span class="form-text text-muted">{{'Change the pin to select the right location'}}</span>
-    </div>
-    @endif
-    <div class="mt-4">
-      <button type="button" class="btn btn-primary" onclick="AddNewClientAddress()">{{ __('cargo::view.save') }}</button>
-      <button type="button" class="btn btn-secondary" onclick="closeAddressDiv()">{{ __('cargo::view.close') }}</button>
-    </div>
-  </div>  --}}
-  {{-- Address end --}}
-
-</div>
-
-{{--  <div class="row mb-5 d-none">
-  <div class="col-md-6 d-none">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.from_country') }}</label>
-      <select id="change-country" name="Shipment[from_country_id]" class="form-control select-country @error('Shipment.from_country_id') is-invalid @enderror">
-        <option value=""></option>
-        @foreach($countries as $country)
-        <option
-        value="{{$country->id}}"
-        {{ old('Shipment.from_country_id') == $country->id ? 'selected' : '' }}
-        @if($typeForm == 'edit')
-        {{ $model->from_country_id == $country->id ? 'selected' : '' }}
-        @endif
-        >{{$country->name}}</option>
-        @endforeach
-      </select>
-      @error('Shipment.from_country_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-  <div class="col-md-6 d-none">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.to_country') }}</label>
-      <select id="change-country-to" name="Shipment[to_country_id]" class="form-control select-country @error('Shipment.to_country_id') is-invalid @enderror">
-        <option value=""></option>
-        @foreach($countries as $country)
-        <option
-        value="{{$country->id}}"
-        {{ old('Shipment.to_country_id') == $country->id ? 'selected' : '' }}
-        @if($typeForm == 'edit')
-        {{ $model->to_country_id == $country->id ? 'selected' : '' }}
-        @endif
-        >{{$country->name}}</option>
-        @endforeach
-      </select>
-      @error('Shipment.to_country_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-</div>
-<div class="row mb-5 d-none">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.from_region') }}</label>
-      <select id="change-state-from" name="Shipment[from_state_id]" class="form-control select-state @error('Shipment.from_state_id') is-invalid @enderror">
-        <option value=""></option>
-        @if($typeForm == 'edit')
-        @foreach(Modules\Cargo\Entities\State::where('country_id',$model->from_country_id)->where('covered',1)->get() as $item)
-        <option
-        value="{{$item->id}}"
-        @if($typeForm == 'edit')
-        {{ $model->from_state_id == $item->id ? 'selected' : '' }}
-        @endif
-        >{{$item->name}}</option>
-        @endforeach
-        @endif
-      </select>
-      @error('Shipment.from_state_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.to_region') }}</label>
-      <select id="change-state-to" name="Shipment[to_state_id]" class="form-control select-state @error('Shipment.to_state_id') is-invalid @enderror">
-        <option value=""></option>
-        @if($typeForm == 'edit')
-        @foreach(Modules\Cargo\Entities\State::where('country_id',$model->to_country_id)->where('covered',1)->get() as $item)
-        <option
-        value="{{$item->id}}"
-        @if($typeForm == 'edit')
-        {{ $model->to_state_id == $item->id ? 'selected' : '' }}
-        @endif
-        >{{$item->name}}</option>
-        @endforeach
-        @endif
-      </select>
-      @error('Shipment.to_state_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-</div>
-<div class="row mb-5 d-none">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.from_area') }}</label>
-      <select name="Shipment[from_area_id]" id="from_area_id" class="form-control select-area @error('Shipment.from_area_id') is-invalid @enderror">
-        <option value=""></option>
-        @if($typeForm == 'edit')
-        @foreach(Modules\Cargo\Entities\Area::where('state_id',$model->from_state_id)->get() as $item)
-        <option
-        value="{{$item->id}}"
-        @if($typeForm == 'edit')
-        {{ $model->from_area_id == $item->id ? 'selected' : '' }}
-        @endif
-        >{{json_decode($item->name, true)[app()->getLocale()]}}</option>
-        @endforeach
-        @endif
-      </select>
-      @error('Shipment.from_area_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label class="col-form-label fw-bold fs-6 required">{{ __('cargo::view.to_area') }}</label>
-      <select name="Shipment[to_area_id]" class="form-control select-area @error('Shipment.to_area_id') is-invalid @enderror">
-        <option value=""></option>
-        @if($typeForm == 'edit')
-        @foreach(Modules\Cargo\Entities\Area::where('state_id',$model->to_state_id)->get() as $item)
-        <option
-        value="{{$item->id}}"
-        @if($typeForm == 'edit')
-        {{ $model->to_area_id == $item->id ? 'selected' : '' }}
-        @endif
-        >{{json_decode($item->name, true)[app()->getLocale()]}}</option>
-        @endforeach
-        @endif
-      </select>
-      @error('Shipment.to_area_id')
-      <div class="invalid-feedback">
-        {{ $message }}
-      </div>
-      @enderror
-    </div>
-  </div>
-</div>  --}}
-
-
-
-<div class="vault_show">
-  <div class="row">
-    <h4 class="bl mt-3">User info</h4>
-    {{--  <div class="col-md-12">
-      <div class="form-group">
-        <label class="col-form-label fw-bold fs-6">Customer Address</label>
-        <textarea class="form-control" name="client_address">{{ old('Shipment.client_address', isset($model) ? $model->client_address : '') }}</textarea>
-      </div>
-    </div>  --}}
-    <div class="col-md-6">
-      <div class="form-group">
-        <label class="col-form-label fw-bold fs-6 required">Username</label>
-        <input type="text" value="{{ old('Shipment.vault_username', isset($model) ? $model->vault_username : '') }}" placeholder="Vault Username" id="v_username" name="vault_username" class="form-control @error('Shipment.vault_username') is-invalid @enderror" required />
-        @error('Shipment.vault_username')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label class="col-form-label fw-bold fs-6 required">Password</label>
-        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
-        @error('Shipment.vault_password')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
-      </div>
-    </div>
-
-
-
-    <div class="col-md-6">
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">Retype Password</label>
-          <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
-          @error('Shipment.vault_password')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">Fullname</label>
-          <input type="text" value="{{ old('Shipment.user_fullname', isset($model) ? $model->user_fullname : '') }}" placeholder="Fullname" id="v_username" name="user_fullname" class="form-control @error('Shipment.user_fullname') is-invalid @enderror" required />
-          @error('Shipment.user_fullname')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-          <label class="col-form-label fw-bold fs-6 required">Email</label>
-          <input type="Email" value="{{ old('Shipment.user_email', isset($model) ? $model->user_email : '') }}" placeholder="Email" id="v_username" name="user_email" class="form-control @error('Shipment.user_email') is-invalid @enderror" required />
-          @error('Shipment.user_email')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-    </div>
-
-  </div>
-</div>
 </div>
 </div>
 
@@ -1460,4 +1090,5 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
           }
 
         </script>
+
         @endpush

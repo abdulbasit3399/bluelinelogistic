@@ -9,16 +9,17 @@ $client = 4;
 @extends('cargo::adminLte.template.layout.layout')
 
 @section('pageTitle')
-Vault List
+Manage Vaults
 @endsection
 
 @section('content')
 <div class="container mt-4" style="background-color: white">
 <br>
 <div class="container-fluid">
-  <div class="row mb-2">
+  <div class="row mb-0">
     <div class="col-sm-6">
-      <h3 class="m-0 bl">{{ __('Vault List') }}</h3>
+      <h3 class="m-0 bl">Manage Vaults Tracking</h3>
+      <p class="bl">You can edit/delete tracking from here.</p>
     </div>
     <div class="col-sm-6">
       <a class="btn btn-success" href="{{route('admin.shipments.vault-create')}}" style="float:right;">Create Vault</a>
@@ -38,19 +39,17 @@ Vault List
             <table class="table" id="vault_table">
               <thead>
                 <tr>
-                  <th><strong>#</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Vault Number</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Vault Username</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Vault Password</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Customer</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Arrears to be paid</strong></th>
+                  <th><strong>ID</strong></th>
+                  <th style="text-transform:uppercase;"><strong>Username</strong></th>
 
-                  <th style="text-transform:uppercase;"><strong>Date of Deposit</strong></th>
-                  <th style="text-transform:uppercase;"><strong>Next Kin</strong></th>
-                  {{--  <th style="text-transform:uppercase;"><strong>Item Description</strong></th>  --}}
+                  <th style="text-transform:uppercase;"><strong>Tracking No.</strong></th>
+                  <th style="text-transform:uppercase;"><strong>Name of Depositor</strong></th>
+                  <th style="text-transform:uppercase;"><strong>Next of Kin</strong></th>
+                  <th style="text-transform:uppercase;"><strong>Good Quantity</strong></th>
+                  <th style="text-transform:uppercase;"><strong>Paid</strong></th>
+
+                  <th style="text-transform:uppercase;"><strong>Deposited on</strong></th>
                   <th style="text-transform:uppercase;"><strong>Status</strong></th>
-                  {{--  <th style="text-transform:uppercase;"><strong>Vault Icon</strong></th>  --}}
-
                   <th>Action</th>
                 </thead>
                 <tbody>
@@ -59,23 +58,19 @@ Vault List
                     foreach ($shipment as $shipments):
                   @endphp
                   <tr>
-                    <td>{{ $count }}</td>
-                    <td>{{ $shipments->vault_number }}</td>
+                    <td>#{{ $shipments->id }}</td>
                     <td>{{ $shipments->vault_username }}</td>
-                    <td>{{ $shipments->vault_password }}</td>
+                    <td>{{ $shipments->vault_number }}</td>
                     <td>{{ $shipments->client->name }}</td>
-                    <td>{{ $shipments->arrears }}</td>
+                    <td>{{ $shipments->next_kin }}</td>
+                    <td>{{ $shipments->quantity }}</td>
+                    <td></td>
 
                     <td>{{ $shipments->d_o_deposit }}</td>
-                    <td>{{ $shipments->next_kin }}</td>
-                    {{--  <td>{{ $shipments->item_des }}</td>  --}}
                     <td>{{ $shipments->status }}</td>
-                    {{--  <td>{{ $shipments->vault_icon }}</td>  --}}
-
-
                     <td>
-                        <a class="btn btn-sm btn-secondary btn-action-table" href="{{route('admin.shipments.vault-edit',$shipments->id)}}"><i class="fa fa-edit"></i></a>
-                        <a class="btn btn-sm btn-secondary btn-action-table" onclick="return confirm('Want to delete this vault?')" href="{{route('admin.shipments.vault-delete',$shipments->id)}}"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('admin.shipments.vault-edit',$shipments->id)}}" class="badge bg-warning p-2"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
+                        <a href="{{route('admin.shipments.vault-delete',$shipments->id)}}" onclick="return confirm('Want to delete this vault?')" class="badge bg-danger p-2"><i class="fa-solid fa-trash text-white"></i></a>
                     </td>
                   </tr>
                   @php $count++; @endphp

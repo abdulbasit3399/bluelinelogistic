@@ -1,16 +1,18 @@
-@extends('cargo::adminLte.layouts.master')
+{{--  @extends('cargo::adminLte.layouts.master')  --}}
+@extends('cargo::adminLte.template.layout.layout')
 
 @section('pageTitle','Goods Tracking Progress')
 
 @section('content')
-
+<div class="container pt-4">
+    <div class="row">
     <!--begin::Basic info-->
     <div class="card mb-5 mb-xl-10">
 
         <div class="card-header">
             <!--begin::Card title-->
             <div class="card-title m-0">
-                <h3 class="fw-bolder m-0">View/Edit Goods Tracking Progress # {{$data['shipment']->code}}</h3>
+                <h3 class="bl">View/Edit Goods Tracking Progress #{{$data['shipment']->code}}</h3>
             </div>
             <!--end::Card title-->
         </div>
@@ -33,11 +35,12 @@
         <!--end::Content-->
     </div>
     <!--end::Basic info-->
-
+</div>
+</div>
 @endsection
 
 {{-- Inject Scripts --}}
-@push('js-component')
+@push('push-scripts')
 <script>
 
 </script>

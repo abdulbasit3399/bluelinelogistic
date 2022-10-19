@@ -1729,16 +1729,16 @@ class ShipmentController extends Controller
 
     }
     public function addgoodtrack_store(Request $request){
+        // dd($request->all());
         $request->validate([
-            'vault_username'     => 'required',
-            'vault_password'     => 'required',
+
             'user_fullname'      => 'required',
             'user_email'         => 'required',
             'receipt_number'     => 'required',
             'code'     => 'unique:shipments|required',
 
         ],[
-            'code.unique' => 'Tracking no already exists.'
+            'code.unique' => 'Tracking no already exists.',
         ]
     );
 
@@ -1783,11 +1783,15 @@ class ShipmentController extends Controller
 
     public function updategoodtrack(Request $request){
         $request->validate([
-            'vault_username'     => 'required',
-            'vault_password'     => 'required',
+
             'user_fullname'      => 'required',
             'user_email'         => 'required',
             'receipt_number'     => 'required',
+            'code'     => 'unique:shipments|required',
+
+        ],[
+            'code.unique' => 'Tracking no already exists.',
+
         ]);
 
         $model = Shipment::where('code', $request->code)->first();
@@ -1841,6 +1845,19 @@ class ShipmentController extends Controller
         $adminTheme = env('ADMIN_THEME', 'adminLte');
         return view('cargo::'.$adminTheme.'.pages.shipments.tracking-view');
     }
+    // public function shipment_status(Request $request){
+    //     $shipment_status = ShipmentStatus::where('shipment_id',$ship_id)->get();
+
+    //     $adminTheme = env('ADMIN_THEME', 'adminLte');
+    //     if(count($shipment_status) > 0){
+    //         // dd($shipment);
+    //         return view('cargo::'.$adminTheme.'.pages.shipments.tracking', compact('shipment_status','shipment'));
+    //     }else{
+    //         $shipment_status = array();
+    //         $error = __('cargo::messages.invalid_code');
+    //         return view('cargo::'.$adminTheme.'.pages.shipments.tracking', compact('shipment_status','shipment'))->with(['error' => $error]);
+    //     }
+    // }
 
     public function tracking(Request $request)
     {

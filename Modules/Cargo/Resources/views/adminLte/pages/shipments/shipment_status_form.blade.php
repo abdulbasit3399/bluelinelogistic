@@ -3,10 +3,12 @@
 <input type="hidden" name="shipment_id" value="{{$data['shipment']->id}}" class="package-type-select" />
 <div id="kt_repeater_1">
   <div class="row" id="">
+    <div class="col-3">
     <a href="https://fontawesome.com/search" target="_blank" class="btn btn-primary">Choose Icon</a>
+    </div>
     <div data-repeater-list="Package" class="col-lg-12">
       @if(count($data['shipment_status']) == 0)
-      <div data-repeater-item class="row align-items-center" style="margin-top: 15px;padding-bottom: 15px;padding-top: 15px;">
+      <div data-repeater-item class="row align-items-center" style="margin-top: 5px;padding-bottom: 5px;padding-top: 5px;">
         <div class="col-md-2">
           <label class="col-form-label fw-bold fs-6 ">Location</label>
           <input class="form-control" type="text"  name="location"  />
@@ -28,7 +30,7 @@
             <input class="form-control" placeholder="<i class=fa-solid> </i>" type="text" name="ship_icon"  />
         </div>
         <div class="col-md-2">
-          <label class="col-form-label fw-bold fs-6 ">Shipment Status</label>
+          <label class="col-form-label fw-bold fs-6 ">Activity</label>
           <select class="form-control" name="ship_status" >
             <option value="Saved Pickup">Saved Pickup</option>
             <option value="Saved Dropoff">Saved Dropoff</option>
@@ -49,7 +51,6 @@
         <div class="col-md-2">
           <div>
             <br/>
-            <br/>
             <a href="javascript:;" data-repeater-delete="" class="btn btn-sm font-weight-bolder btn-light-danger delete_item">
               <i class="la la-trash-o"></i>{{ __('cargo::view.delete') }}
             </a>
@@ -59,7 +60,7 @@
       </div>
       @else
       @foreach($data['shipment_status'] as $pack)
-      <div data-repeater-item class="row align-items-center" style="margin-top: 15px;padding-bottom: 15px;padding-top: 15px;">
+      <div data-repeater-item class="row align-items-center" style="margin-top: 5px;padding-bottom: 5px;padding-top: 5px;">
 
 
         <div class="col-md-2">
@@ -160,7 +161,7 @@
 @endsection
 
 {{-- Inject Scripts --}}
-@push('js-component')
+@push('push-scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js" integrity="sha512-foIijUdV0fR0Zew7vmw98E6mOWd9gkGWQBWaoA1EOFAx+pY+N8FmmtIYAVj64R98KeD2wzZh1aHK0JSpKmRH8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.3.0/jquery.bootstrap-touchspin.min.js" integrity="sha512-0hFHNPMD0WpvGGNbOaTXP0pTO9NkUeVSqW5uFG2f5F9nKyDuHE3T4xnfKhAhnAZWZIO/gBLacwVvxxq0HuZNqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

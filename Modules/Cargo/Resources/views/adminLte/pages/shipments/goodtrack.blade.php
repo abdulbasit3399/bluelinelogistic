@@ -55,7 +55,7 @@
 
                     <td>
                         <a href="{{ url('shipments/edit_goodtrack/'.$share_datas->id) }}" class="badge bg-warning p-2"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
-                        <a href="#" class="badge bg-primary p-2"><i class="fa-solid fa-truck text-white"></i></a>
+                        <a href="{{ url('shipment_status/'.$share_datas->id) }}" class="badge bg-primary p-2"><i class="fa-solid fa-truck text-white"></i></a>
 
                         <a href="{{ route('shipments.delete.goodtrack',$share_datas->id) }}" class="badge bg-danger p-2"><i class="fa-solid fa-trash text-white"></i></a>
                     </td>
