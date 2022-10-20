@@ -12,11 +12,11 @@
     @if(\Session::has('error'))
     <div class="col-md-12">
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>{{\Session::get('error')}}</strong>
-    <button type="button" class="btn close" data-dismiss="alert" aria-label="Close">
-        {{--  <span class="text-end">&times;</span>  --}}
-    </button>
-    </div>
+        <strong>{{\Session::get('error')}}</strong>
+        <button type="button" class="btn close" data-dismiss="alert" aria-label="Close">
+            {{--  <span class="text-end">&times;</span>  --}}
+        </button>
+        </div>
     </div>
     @endif
     <!--begin::Basic info-->
