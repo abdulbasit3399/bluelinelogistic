@@ -140,7 +140,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
     <div class="col-md-6 py-2">
     <div class="form-group">
         <label class="col-form-label fw-bold fs-6 required">Password</label>
-        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
+        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
         @error('Shipment.vault_password')
         <div class="invalid-feedback">
         {{ $message }}
@@ -154,7 +154,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
     <div class="col-md-6 py-2">
         <div class="form-group">
         <label class="col-form-label fw-bold fs-6 required">Retype Password</label>
-        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="Vault Password" required name="vault_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
+        <input type="password" value="{{ old('Shipment.vault_password', isset($model) ? $model->vault_password : '') }}" placeholder="" required name="confirm_password" class="form-control @error('Shipment.vault_password') is-invalid @enderror" />
         @error('Shipment.vault_password')
         <div class="invalid-feedback">
             {{ $message }}

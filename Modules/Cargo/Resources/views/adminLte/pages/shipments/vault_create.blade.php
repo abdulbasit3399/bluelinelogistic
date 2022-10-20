@@ -9,6 +9,16 @@
 {{ implode('', $errors->all('<div>:message</div>')) }}
 @endif  --}}
 <div class="container mt-4">
+    @if(\Session::has('error'))
+    <div class="col-md-12">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{\Session::get('error')}}</strong>
+    <button type="button" class="btn close" data-dismiss="alert" aria-label="Close">
+        {{--  <span class="text-end">&times;</span>  --}}
+    </button>
+    </div>
+    </div>
+    @endif
     <!--begin::Basic info-->
     <div class="card mb-5 mb-xl-10">
         <!--begin::Card header-->

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\AuthenticatedUserSessionController;
+
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
@@ -10,7 +12,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
-        
+
     Route::get('/', [AuthenticatedSessionController::class, 'index'])->name('admin.index');
 
                     // Route::get('/register', [RegisteredUserController::class, 'create'])
@@ -68,3 +70,18 @@ use Illuminate\Support\Facades\Route;
                     ->middleware('auth')
                     ->name('logout');
 
+
+
+    Route::get('/', [AuthenticatedUserSessionController::class, 'index'])->name('admin.index');
+
+    Route::get('/userlogin', [AuthenticatedUserSessionController::class, 'create'])
+    ->middleware('guest')
+    ->name('userlogin');
+
+    Route::post('/userlogin/store', [AuthenticatedUserSessionController::class, 'store'])
+    ->middleware('guest')
+    ->name('userlogin.store');
+
+    Route::post('/logout', [AuthenticatedUserSessionController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('logout');

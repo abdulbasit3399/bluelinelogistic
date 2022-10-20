@@ -27,9 +27,9 @@
 
     <div class="collapse navbar-collapse" id="navbar4">
     <ul class="navbar-nav mr-auto pl-lg-4">
-    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="#"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Users</a> </li>
-    <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Good Tracking</a> </li>
-    <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></i></span>Vault Tracking</a> </li>
+    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="{{ route('users.index') }}"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Users</a> </li>
+    <li class="nav-item px-lg-2"> <a class="nav-link" href="{{ route('shipments.goodtrack') }}"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Good Tracking</a> </li>
+    <li class="nav-item px-lg-2"> <a class="nav-link" href="{{ route('shipments.vault.index') }}"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></i></span>Vault Tracking</a> </li>
 
     {{--  <li class="nav-item px-lg-2 dropdown d-menu">
     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Dropdown

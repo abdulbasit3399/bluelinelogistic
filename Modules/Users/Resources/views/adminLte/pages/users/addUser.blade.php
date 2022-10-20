@@ -5,7 +5,13 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
+    @if (\Session::has('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{\Session::get('error')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <div class="card mt-4">
 
         <div class="card-header">
@@ -21,7 +27,7 @@
             <div class="mb-3 col-4">
                 <label class="form-label">Username</label>
                 <div class="input-group">
-                    <input type="text" name="username" class="form-control form-control @error('username') is-invalid @enderror" placeholder="{{ __('username') }}" value="{{ old('username', isset($model) ? $model->username : '') }}" />
+                    <input type="text" name="username" class="form-control form-control @error('username') is-invalid @enderror" placeholder="{{ __('username') }}" value="{{ old('username') }}" />
                     @error('username')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -44,7 +50,7 @@
 
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Retype Password</label>
-                <input type="password" class="form-control" id="">
+                <input type="password" name="confirm_password" class="form-control" id="">
               </div>
             </div>
 
@@ -52,7 +58,7 @@
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Full Name</label>
                 <div class="input-group">
-                    <input type="text" name="name" class="form-control form-control @error('name') is-invalid @enderror" placeholder="{{ __('users::view.table.full_name') }}" value="{{ old('name', isset($model) ? $model->name : '') }}" />
+                    <input type="text" name="name" class="form-control form-control @error('name') is-invalid @enderror" placeholder="{{ __('users::view.table.full_name') }}" value="{{ old('name') }}" />
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -63,7 +69,7 @@
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Email address</label>
                 <div class="input-group">
-                    <input type="text" name="email" class="form-control form-control @error('email') is-invalid @enderror" placeholder="{{ __('users::view.table.email') }}" value="{{ old('email', isset($model) ? $model->email : '') }}" />
+                    <input type="text" name="email" class="form-control form-control @error('email') is-invalid @enderror" placeholder="{{ __('users::view.table.email') }}" value="{{ old('email') }}" />
                     @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}

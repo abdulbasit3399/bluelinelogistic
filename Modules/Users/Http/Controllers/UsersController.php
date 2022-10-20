@@ -85,15 +85,23 @@ class UsersController extends Controller
         // dd($request->all());
         $data = $request->all();
         $data['password'] = bcrypt($data['password']);
-        $user = User::create($data);
-        $data['user_id']  =   $user->id;
-        // dd($user);
+        if($request->password == $request->confirm_password)
+        {
+            $user = User::create($data);
+            $data['user_id']  =   $user->id;
+            // dd($user);
 
-        $user->addFromMediaLibraryRequest($request->image)->toMediaCollection('avatar');
-        // event(new UserCreatedEvent($data));
-        // return redirect()->route('users.index')->with(['message_alert' => __('users::messages.users.created')]);
+            $user->addFromMediaLibraryRequest($request->image)->toMediaCollection('avatar');
+            // event(new UserCreatedEvent($data));
+            // return redirect()->route('users.index')->with(['message_alert' => __('users::messages.users.created')]);
 
-        return redirect()->route('users.index')->with(['message_alert' => __('users::messages.users.created')]);
+            return redirect()->route('users.index')->with(['message_alert' => __('users::messages.users.created')]);
+
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Password is not confirmed!');
+        }
 
 
     }
@@ -159,8 +167,14 @@ class UsersController extends Controller
         if (empty($request->password)) {
             $data = $request->only(['name', 'username', 'type', 'email', 'role']);
         }else{
-            $data = $request->only(['name', 'username', 'type', 'email', 'role' ,'password']);
+            $data = $request->only(['name', 'username', 'type', 'email', 'role' ,'password', 'confirm_password']);
+            if($request->password == $request->confirm_password)
+            {
             $data['password'] = bcrypt($data['password']);
+            }
+            else{
+                return redirect()->back()->with('error', 'Password is not confirmed!');
+            }
         }
 
         $user->update($data);

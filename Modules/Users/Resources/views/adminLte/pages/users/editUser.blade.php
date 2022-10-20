@@ -5,7 +5,13 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
+    @if (\Session::has('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{\Session::get('error')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <div class="card mt-4">
 
         <div class="card-header">
@@ -53,7 +59,7 @@
 
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Retype Password</label>
-                <input type="password" class="form-control" id="">
+                <input type="password" name="confirm_password" class="form-control" id="">
               </div>
             </div>
 

@@ -9,11 +9,13 @@
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
         <a href="{{ aurl('/') }}" class="mb-12">
-          @php 
+          @php
               $model = App\Models\Settings::where('group', 'general')->where('name','login_page_logo')->first();
               $system_logo = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
           @endphp
-          <img alt="Logo" src="{{ $model->getFirstMediaUrl('login_page_logo') ? $model->getFirstMediaUrl('login_page_logo') : ( $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') ) }}" style="max-width: 88px;max-height: 52px;" />
+          {{--  <img alt="Logo" src="{{ $model->getFirstMediaUrl('login_page_logo') ? $model->getFirstMediaUrl('login_page_logo') : ( $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') ) }}" style="max-width: 88px;max-height: 52px;" />  --}}
+
+          <img alt="Logo" src="{{ asset('assets/lte/bll.png') }}" style="max-width: 88px;max-height: 52px;" />
         </a>
     </div>
     @if(env('DEMO_MODE') == 'On')

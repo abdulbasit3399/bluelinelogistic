@@ -156,6 +156,8 @@ class ShipmentController extends Controller
             'd_o_deposit' => 'required',
 
         ]);
+        if($request->vault_password == $request->confirm_password)
+        {
         $model = new Shipment;
 
         $model->type = 3;
@@ -185,6 +187,11 @@ class ShipmentController extends Controller
         // dd($model->all());
         $model->save();
         return redirect()->route('shipments.vault.index')->with(['message_alert' => "Vault created successfully."]);
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Password is not confirmed!');
+        }
     }
 
     // Vault Update
@@ -222,6 +229,8 @@ class ShipmentController extends Controller
         ]);
 
         try {
+            if($request->vault_password == $request->confirm_password)
+            {
             DB::beginTransaction();
             $model = Shipment::where('id', $request->ship_id)->first();
             // dd($model);
@@ -260,6 +269,10 @@ class ShipmentController extends Controller
 
             $model->syncFromMediaLibraryRequest($request->image)->toMediaCollection('attachments');
             return redirect()->route('shipments.vault.index', $model->id)->with(['message_alert' => __('cargo::messages.saved')]);;
+
+            }else{
+                return redirect()->back()->with('error', 'Password is not confirmed!');
+            }
         } catch (\Exception $e) {
             DB::rollback();
             print_r($e->getMessage());
@@ -1907,12 +1920,13 @@ class ShipmentController extends Controller
 
         $request->validate([
             'vault_number'         => 'required',
-            'vault_username'       => 'required',
-            'vault_password'       => 'required',
+            // 'vault_username'       => 'required',
+            // 'vault_password'       => 'required',
         ]);
 
-        $shipment = Shipment::where([['vault_number', $request->vault_number],['vault_username', $request->vault_username],['vault_password', $request->vault_password]])->first();
+        // $shipment = Shipment::where([['vault_number', $request->vault_number],['vault_username', $request->vault_username],['vault_password', $request->vault_password]])->first();
         // dd($shipment);
+        $shipment = Shipment::where([['vault_number', $request->vault_number]])->first();
 
         $adminTheme = env('ADMIN_THEME', 'adminLte');
 

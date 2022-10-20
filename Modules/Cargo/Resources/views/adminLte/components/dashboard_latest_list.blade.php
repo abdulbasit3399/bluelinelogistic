@@ -61,19 +61,19 @@
                             <td>{{$shipment->getStatus()}}</td>
                             <td>{{$shipment->type}}</td>
                             <td>
-                                @if(in_array($user_role ,[$admin,$auth_branch]) || auth()->user()->can('manage-customers') )
+                                {{--  @if(in_array($user_role ,[$admin,$auth_branch]) || auth()->user()->can('manage-customers') )
                                     <a href="{{route('clients.show',$shipment->client_id)}}">{{$shipment->client->name}}</a>
                                 @else
                                     {{$shipment->client->name}}
-                                @endif
+                                @endif  --}}
                             </td>
-                            @if($user_role != $auth_branch)
+                            {{--  @if($user_role != $auth_branch)
                                 @if( in_array($user_role ,[$admin]) || auth()->user()->can('manage-branches') )
                                     <td><a href="{{route('branches.show',$shipment->branch_id)}}">{{$shipment->branch->name}}</a></td>
                                 @else
                                     <td>{{$shipment->branch->name}}</td>
                                 @endif
-                            @endif
+                            @endif  --}}
 
                             <td>{{format_price($shipment->tax + $shipment->shipping_cost + $shipment->insurance) }}</td>
                             <td>{{$shipment->payment_method_id}}</td>
