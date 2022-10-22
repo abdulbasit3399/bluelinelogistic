@@ -171,7 +171,7 @@ $auth_dilver = 5;
 
 
                 {{-- staff --}}
-                @if ($user_role == $auth_staff)
+                {{--  @if ($user_role == $auth_staff)
                     @php
                         $item_id = Modules\Cargo\Entities\Staff::where('user_id', auth()->user()->id)
                             ->pluck('id')
@@ -185,7 +185,7 @@ $auth_dilver = 5;
                         @lang('users::view.account_settings')
                     </a>
                     <div class="dropdown-divider"></div>
-                @endif
+                @endif  --}}
 
 
 

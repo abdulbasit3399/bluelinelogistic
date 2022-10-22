@@ -12,6 +12,7 @@ class HomeController extends Controller
 
     public function index()
     {
+        return redirect()->route('users.index');
         breadcrumb([
             [
                 'name' => __('view.dashboard')

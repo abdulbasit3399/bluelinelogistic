@@ -19,6 +19,7 @@ class AuthenticatedSessionController extends Controller
     public function index()
     {
         if (Auth::guard('web')->check()) {
+            // return redirect()->route()
             return redirect(env('PREFIX_ADMIN', 'admin') . RouteServiceProvider::HOME);
         } else {
             return redirect()->route('login');
