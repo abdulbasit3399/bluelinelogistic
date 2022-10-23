@@ -372,7 +372,7 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                     </div>
                     @endforeach
             </div>
-            @if($shipment)
+            @if($shipment && $shipment->client))
             <div class="col-md-6 col-lg-6">
                 <div class="vl">
                     <div class="px-3 py-1">
