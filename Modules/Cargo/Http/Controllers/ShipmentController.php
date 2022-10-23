@@ -1732,7 +1732,7 @@ class ShipmentController extends Controller
     public function addgoodtrack(Request $request){
 
 
-        $country_data = DB::table('Countries')->select('id','name')->get();
+        $country_data = DB::table('countries')->select('id','name')->get();
 
 
         $adminTheme = env('ADMIN_THEME', 'adminLte');
@@ -1789,7 +1789,7 @@ class ShipmentController extends Controller
 
     public function editgoodtrack($id){
         $item = Shipment::findOrFail($id);
-        $country_data = DB::table('Countries')->select('id','name')->get();
+        $country_data = DB::table('countries')->select('id','name')->get();
         $adminTheme = env('ADMIN_THEME', 'adminLte');
         return view('cargo::'.$adminTheme.'.pages.shipments.edit_goodtrack', compact('country_data'))->with(['model' => $item]);
     }
