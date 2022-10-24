@@ -59,7 +59,16 @@
     <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
     </a> </li>
     </ul>  --}}
+
     </div>
+
+    @auth
+    <form class="" action="{{ route('userlogout') }}" method="post">
+        {{ csrf_field() }}
+        <button align="right" type="submit" class="btn btn-light text-dark" name="logout">Logout</button>
+    </form>
+    @endauth
+
     </div>
     </nav>
 

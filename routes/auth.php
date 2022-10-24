@@ -82,6 +82,6 @@ use Illuminate\Support\Facades\Route;
     ->middleware('guest')
     ->name('userlogin.store');
 
-    Route::post('/logout', [AuthenticatedUserSessionController::class, 'destroy'])
+    Route::post('/userlogout', [AuthenticatedUserSessionController::class, 'destroy'])
     ->middleware('auth')
-    ->name('logout');
+    ->name('userlogout');
