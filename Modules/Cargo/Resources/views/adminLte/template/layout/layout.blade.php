@@ -163,7 +163,7 @@ window.onload = function() {
             $.widget.bridge('uibutton', $.ui.button)
         </script>
         <!-- Bootstrap 4 -->
-        <script src="{{ asset('assets/lte') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        {{--  <script src="{{ asset('assets/lte') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>  --}}
         <!-- ChartJS -->
         {{--  <script src="{{ asset('assets/lte') }}/plugins/chart.js/Chart.min.js"></script>  --}}
         <!-- Sparkline -->

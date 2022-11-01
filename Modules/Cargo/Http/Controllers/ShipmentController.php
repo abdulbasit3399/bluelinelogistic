@@ -1881,6 +1881,7 @@ class ShipmentController extends Controller
             $ship_id = 0;
 
         $shipment_status = ShipmentStatus::where('shipment_id',$ship_id)->get();
+        // dd($shipment_status);
 
         $adminTheme = env('ADMIN_THEME', 'adminLte');
         if(count($shipment_status) > 0){
