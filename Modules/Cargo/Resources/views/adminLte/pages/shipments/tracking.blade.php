@@ -18,9 +18,8 @@ $pageTitle =  __('cargo::view.tracking_shipment');
 
 @section('content')
 <div class="container mt-4">
-    <div class="card px-4">
-        <div class="row">
-           <div class="col-md-12 col-lg-12">
+    <div class="card px-8">
+        <div class="row justify-content-center">
              <div class="alert alert-custom alert-white  gutter-b mb-0 pb-0" role="alert">
                  <div class="alert-text">
                      <!--begin::Logo-->
@@ -33,30 +32,30 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                  </div>
              </div>
 
-             <div class="d-flex justify-content-between pb-10 pb-md-10 flex-column flex-md-row">
+             {{--  <div class="d-flex justify-content-between pb-0 pb-md-10 ">
                  {{--  @php
                      $code = filter_var($model->shipment_id, FILTER_SANITIZE_NUMBER_INT);
                  @endphp  --}}
-                @if(isset($error))
+                {{-- @if(isset($error))
                 <h1 class="display-5 font-weight-boldest mb-0" style="color:red">{{$error}}</h1>
                 @else
                 <h1 class="display-5 font-weight-boldest mb-0">{{ __('Shipment Tracking') }}</h1>
                 @endif
-
-             </div>
-            </div>
+             </div>  --}}
         </div>
-        <div class="card-body px-4 table-responsive">
-            <table class="table">
+        <h1 class="text-start display-5 font-weight-boldest mb-0 px-10">{{ __('Shipment Tracking') }}: {{$shipment->code}}</h1>
+
+        <div class="card-body">
+            <table class="table table-responsive table-striped table-hover">
                 <thead>
                     <tr>
-                        <th class="text-uppercase"><strong>{{ __('cargo::view.client_sender') }}</strong></th>
-                        <th class="text-uppercase"><strong>sender address</strong></th>
-                        <th class="text-uppercase"><strong>{{ __('cargo::view.date') }}</strong></th>
-                        <th class="text-uppercase"><strong>{{ __('Amount') }}</strong></th>
-                        <th class="text-uppercase"><strong>{{ __('cargo::view.receiver') }}</strong></th>
-                        <th class="text-uppercase"><strong>reciever address</strong></th>
-                        <th class="text-uppercase"><strong>quantity</strong></th>
+                        <th class="text-uppercase fw-bold">{{ __('cargo::view.client_sender') }}</th>
+                        <th class="text-uppercase fw-bold">sender address</th>
+                        <th class="text-uppercase fw-bold">{{ __('cargo::view.date') }}</th>
+                        <th class="text-uppercase fw-bold">{{ __('Amount') }}</th>
+                        <th class="text-uppercase fw-bold">{{ __('cargo::view.receiver') }}</th>
+                        <th class="text-uppercase fw-bold">reciever address</th>
+                        <th class="text-uppercase fw-bold">quantity</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,56 +83,7 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                 </tbody>
             </table>
         </div>
-
-
-            {{--  <div class="col-md-6 col-lg-6">
-                    @foreach ($shipment_status as $models)
-                    <div class="tracking-item">
-                     <div class="tracking-icon">
-                         {!! $models->ship_icon !!}
-                     </div>
-                       <div class="tracking-date">{{ Carbon\Carbon::parse($models->date)->format('d F, y') }}<span>{{$models->local_time}}</span> </div>
-                       <div class="tracking-content">{{$models->current_status}}<span>{{$models->current_address}}</span></div>
-                    </div>
-                    @endforeach
-            </div>
-            @if($shipment && $shipment->client)
-            <div class="col-md-6 col-lg-6">
-                <div class="vl">
-                    <div class="px-3 py-1">
-                        <p><strong>Estimated Delivery Date</strong>
-                        <br>
-                        {{ Carbon\Carbon::parse($shipment->estimated_delivery_date)->format('d F, y') }}
-                        </p>
-                        <p><strong>Sender Details</strong>
-                        <br>
-                        {{ $shipment->client->name }}
-                        <br>
-                        {{ $shipment->client_address }}
-                        <br>
-                        {{ $shipment->client_phone }}
-                        </p>
-                        <p><strong>Reciever Details</strong>
-                            <br>
-                            {{ $shipment->reciver_name ? $shipment->reciver_name.'<br>': '' }}
-
-                            {{ $shipment->reciver_address }}
-                            <br>
-                            {{ $shipment->reciver_phone }}
-                        </p>
-                        <p><strong>Additional Details</strong>
-                            <br>
-                            <span>Payment Type: </span> {{ $shipment->payment_method_id }}
-                            <br>
-                            <span>Shipping Cost: </span> {{ $shipment->shipping_cost }}
-                            <br>
-                           <span>Amount to be Collected: </span> {{ $shipment->amount_to_be_collected }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            @endif  --}}
-     </div>
+    </div>
 </div>
 @endsection
 
