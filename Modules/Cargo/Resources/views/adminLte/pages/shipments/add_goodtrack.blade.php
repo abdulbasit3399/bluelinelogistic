@@ -123,7 +123,9 @@
                 <div class="col-md-6 py-2">
                     <div class="form-group">
                     <label class="col-form-label fw-bold fs-6 required">Tracking Status</label>
-                    <select class="form-control select2" data-placeholder="Select Status"
+                    <input type="text" value="{{ old('status') }}" placeholder="Status" name="status" id="status" required class="form-control @error('Shipment.status') is-invalid @enderror" />
+                    
+                    {{--  <select class="form-control select2" data-placeholder="Select Status"
                         data-allow-clear="true" data-control="select2" name="status" required>
 
                         <option value="Saved Pickup">Saved Pickup</option>
@@ -139,7 +141,7 @@
                         <option value="Returned">Returned</option>
                         <option value="On Hold">On Hold</option>
                         <option value="In Vault">In Vault</option>
-                    </select>
+                    </select>  --}}
                     </div>
                 </div>
 
@@ -259,14 +261,16 @@
                 <div class="col-md-6 py-2">
                     <div class="form-group">
                     <label class="col-form-label fw-bold fs-6 required">Payment Status</label>
-                    <select class="form-control select2" data-placeholder="Select Status"
+                    <input type="text" value="{{ old('payment_status') }}" placeholder="Payment Status" name="payment_status" id="payment_status" required class="form-control @error('Shipment.payment_status') is-invalid @enderror" />
+                    
+                    {{--  <select class="form-control select2" data-placeholder="Select Status"
                         data-allow-clear="true" data-control="select2" name="payment_status" required>
 
                         <option value="Pending">Pending</option>
                         <option value="Paid">Paid</option>
                         <option value="Cancelled">Cancelled</option>
 
-                    </select>
+                    </select>  --}}
                     </div>
                 </div>
 

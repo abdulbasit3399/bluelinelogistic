@@ -31,7 +31,9 @@
         </div>
         <div class="col-md-2">
           <label class="col-form-label fw-bold fs-6 ">Activity</label>
-          <select class="form-control" name="ship_status" >
+          <input type="text" value="{{ old('Shipment.ship_status', isset($model) ? $model->ship_status : '') }}" placeholder="Status" name="ship_status" id="ship_status" required class="form-control @error('Shipment.ship_status') is-invalid @enderror" />
+
+          {{--  <select class="form-control" name="ship_status" >
             <option value="Saved Pickup">Saved Pickup</option>
             <option value="Saved Dropoff">Saved Dropoff</option>
             <option value="Requested Pickup">Requested Pickup</option>
@@ -45,7 +47,7 @@
             <option value="Returned">Returned</option>
             <option value="On Hold">On Hold</option>
             <option value="In Vault">In Vault</option>
-          </select>
+          </select>  --}}
         </div>
 
         <div class="col-md-2">

@@ -50,23 +50,43 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                 <thead>
                     <tr>
                         <th class="text-uppercase fw-bold">{{ __('cargo::view.client_sender') }}</th>
-                        <th class="text-uppercase fw-bold">sender address</th>
-                        <th class="text-uppercase fw-bold">{{ __('cargo::view.date') }}</th>
-                        <th class="text-uppercase fw-bold">{{ __('Amount') }}</th>
-                        <th class="text-uppercase fw-bold">{{ __('cargo::view.receiver') }}</th>
-                        <th class="text-uppercase fw-bold">reciever address</th>
-                        <th class="text-uppercase fw-bold">quantity</th>
+                        <td>{{$shipment->client->name}}</td>
+                        
                     </tr>
+                    <tr>
+                    <th class="text-uppercase fw-bold">sender address</th>
+                        <td>{{$shipment->client_address}}</td>
+                    
+                    </tr>
+                    <tr>
+                    <th class="text-uppercase fw-bold">{{ __('cargo::view.date') }}</th>
+                        <td>{{ Carbon\Carbon::parse($shipment->created_at)->format('d F, y') }}</td>
+                    
+                    </tr>
+                    <tr>
+                    <th class="text-uppercase fw-bold">{{ __('Amount') }}</th>
+                        <td>{{$shipment->amount_to_be_collected}}</td>
+                        
+                    </tr>
+                    <tr>
+                    <th class="text-uppercase fw-bold">{{ __('cargo::view.receiver') }}</th>
+                        <td>{{$shipment->reciever->name}}</td>
+                    </tr>
+                    
+                    <tr>
+                    <th class="text-uppercase fw-bold">reciever address</th>
+                        <td>{{$shipment->reciver_address}}</td>
+                    
+                    </tr>
+                    <tr>
+                        <th class="text-uppercase fw-bold">quantity</th>
+                        <td>{{$shipment->quantity}}</td>
+
+                    </tr>
+
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{$shipment->client->name}}</td>
-                        <td>{{$shipment->client_address}}</td>
-                        <td>{{ Carbon\Carbon::parse($shipment->created_at)->format('d F, y') }}</td>
-                        <td>{{$shipment->amount_to_be_collected}}</td>
-                        <td>{{$shipment->reciever->name}}</td>
-                        <td>{{$shipment->reciver_address}}</td>
-                        <td>{{$shipment->quantity}}</td>
 
                     {{--  @foreach(Modules\Cargo\Entities\PackageShipment::where('shipment_id',$shipment->id)->get() as $package)
                         <td>{{$package->qty}}</td>
@@ -82,8 +102,49 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                     @endforeach
                 </tbody>
             </table>
+
         </div>
     </div>
 </div>
+
+<div class="container mt-4">
+    <div class="card px-8">
+        <div class="row justify-content-center">
+        <div class="card-body">
+        <h3 class="bl">Package Progress</h3>
+            <table class="table table-responsive table-striped table-hover">
+
+                <thead>
+                    <th class="text-uppercase fw-bold">{{ __('Location') }}</th>
+                    <th class="text-uppercase fw-bold">Receipt no.</th>
+                    <th class="text-uppercase fw-bold">{{ __('Customer') }}</th>
+                    <th class="text-uppercase fw-bold">{{ __('Date') }}</th>
+                    <th class="text-uppercase fw-bold">{{ __('Local Time') }}</th>
+                    <th class="text-uppercase fw-bold">Icon</th>
+                    <th class="text-uppercase fw-bold">Activity</th>
+
+                </thead>
+            @foreach ($shipment_status as $st)
+
+                <tbody>
+                <tr>
+                    <td class="px-3">{{$st->current_address}}</td>
+                    <td class="px-3">{{$st->receipt_no}}</td>
+                    <td class="px-3">{{$st->depositor}}</td>
+                    <td class="px-3">{{ Carbon\Carbon::parse($st->created_at)->format('d F, y') }}</td>
+                    <td class="px-3">{{$st->local_time}}</td>
+                    <td class="px-3"> {!!$st->ship_icon!!}</td>
+                    <td class="px-3">{{$st->current_status}}</td>
+                </tr>
+                </tbody>
+            @endforeach
+
+            </table>
+
+        </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 

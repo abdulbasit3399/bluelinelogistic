@@ -61,7 +61,7 @@ Manage Vaults
                     <td>#{{ $shipments->id }}</td>
                     <td>{{ $shipments->vault_username }}</td>
                     <td>{{ $shipments->vault_number }}</td>
-                    <td>{{ $shipments->client->name }}</td>
+                    <td>{{ $shipments->despositor }}</td>
                     <td>{{ $shipments->next_kin }}</td>
                     <td>{{ $shipments->quantity }}</td>
                     <td></td>

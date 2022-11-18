@@ -214,8 +214,16 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
 
 
           <div class="col-md-6 py-2">
-            <div class="form-group client-select">
-              <label class="col-form-label fw-bold fs-6 required">{{ __('Name of Depositor') }}</label>
+          <label class="col-form-label fw-bold fs-6 required">{{ __('Name of Depositor') }}</label>
+            <input placeholder="{{ __('Despositor Name') }}" name="despositor" id="despositor" required value="{{ old('Shipment.despositor', isset($model) ? $model->despositor : '' ) }}" class="form-control @error('Shipment.despositor') is-invalid @enderror" />
+
+            @error('Shipment.despositor')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+
+            {{--  <div class="form-group client-select">               
               @if($user_role == $auth_client)
               <input type="text" placeholder="" class="form-control" name="" value="{{$userClient->name}}" disabled>
               <input type="hidden" name="Shipment[client_id]" value="{{$userClient->id}}">
@@ -241,14 +249,10 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
               @endforeach
 
             </select>
-            @error('Shipment.client_id')
-            <div class="invalid-feedback">
-              {{ $message }}
-            </div>
-            @enderror
+
             @endif
 
-          </div>
+          </div>  --}}
         </div>
 
         <div class="col-md-6 py-2">
@@ -274,7 +278,9 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
         <div class="col-md-6 py-2">
             <div class="form-group">
               <label class="col-form-label fw-bold fs-6 required">Status</label>
-              <select class="form-control select2" data-placeholder="Select Status"
+                    <input type="text" value="{{ old('Shipment.ship_status', isset($model) ? $model->ship_status : '') }}" placeholder="Status" name="ship_status" id="ship_status" required class="form-control @error('Shipment.ship_status') is-invalid @enderror" />
+
+              {{--  <select class="form-control select2" data-placeholder="Select Status"
                 data-allow-clear="true" data-control="select2" name="ship_status" required>
                 @if($typeForm == 'edit')
                 <option value="Saved Pickup" {{$model->status == 'Saved Pickup' ? 'selected':''}}>Saved Pickup</option>
@@ -305,7 +311,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
                 <option value="On Hold">On Hold</option>
                 <option value="In Vault">In Vault</option>
                 @endif
-              </select>
+              </select>  --}}
             </div>
           </div>
 

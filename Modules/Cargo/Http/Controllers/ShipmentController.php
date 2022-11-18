@@ -145,12 +145,12 @@ class ShipmentController extends Controller
     public function vault_store(Request $request)
     {
         // dd($request->all());
-
+        
         $request->validate([
             'vault_username' => 'required',
             'vault_password' => 'required',
             'next_kin' => 'required',
-            // 'item_des' => 'required',
+            'despositor' => 'required',
 
             'arrears' => 'required',
             'd_o_deposit' => 'required',
@@ -163,7 +163,7 @@ class ShipmentController extends Controller
         $model->type = 3;
         $model->code = '';
         $model->status_id = 1;
-        $model->client_id = $request->Shipment['client_id'];
+        // $model->client_id = $request->Shipment['client_id'];
         //$model->client_phone = $request->Shipment['client_phone'];
 
         // $model->client_address = $request->client_address;
@@ -175,6 +175,8 @@ class ShipmentController extends Controller
         // $model->vault_number = 'VA'.time();
         $model->vault_number = $request->vault_number;
         $model->next_kin = $request->next_kin;
+        $model->despositor = $request->despositor;
+
         // $model->vault_icon = $request->vault_icon;
         $model->quantity = $request->quantity;
 
@@ -238,7 +240,7 @@ class ShipmentController extends Controller
             $model->type = 3;
             $model->code = '';
             $model->status_id = 1;
-            $model->client_id = $request->Shipment['client_id'];
+            // $model->client_id = $request->Shipment['client_id'];
             // $model->client_phone = $request->Shipment['client_phone'];
             // $model->client_address = $request->client_address;
             $model->user_fullname = $request->user_fullname;
@@ -250,6 +252,8 @@ class ShipmentController extends Controller
             $model->vault_number = $request->vault_number;
 
             $model->next_kin = $request->next_kin;
+            $model->despositor = $request->despositor;
+
             $model->quantity = $request->quantity;
 
             // $model->vault_icon = $request->vault_icon;
@@ -294,7 +298,7 @@ class ShipmentController extends Controller
             'Shipment.branch_id'       => 'required',
             'Shipment.shipping_date'   => 'nullable',
             'Shipment.collection_time' => 'nullable',
-            'Shipment.client_id'       => 'required',
+            
             'Shipment.reciver_id'       => 'required',
             // 'Shipment.vault_username'    => 'required',
             // 'Shipment.vault_password'    => 'required',
