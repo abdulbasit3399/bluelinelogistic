@@ -16,9 +16,10 @@ if (\Illuminate\Support\Facades\Schema::hasTable('translations') && check_module
   Route::group(
     [
       'prefix' => LaravelLocalization::setLocale(),
-      'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+      'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
+    Route::middleware('auth')->group(function() {
       Route::get('shipments/shipment-calc', 'ShipmentController@shipmentCalc')->name('shipment-calc');
       Route::get('shipment_status/{id}', 'ShipmentStatusController@shipment_status')->name('shipment-status');
       Route::post('shipment_status/store', 'ShipmentStatusController@shipment_status_store')->name('shipment_status_store');
@@ -47,7 +48,7 @@ if (\Illuminate\Support\Facades\Schema::hasTable('translations') && check_module
       Route::get('shipments/vault/tracking/view', 'ShipmentController@VaultTrackingView')->name('shipments.vault.view.tracking');
       Route::get('shipments/vault/tracking/{vault_number?}','ShipmentController@VaultTracking')->name('shipments.vault.tracking');
       Route::get('shipments/vault_index', 'ShipmentController@VaultIndex')->name('shipments.vault.index');
-
+    });
 
       Route::get('shipments/calculator','ShipmentController@calculator')->name('shipments.calculator');
       Route::post('shipments/calculator/store','ShipmentController@calculatorStore')->name('shipments.calculator.store');

@@ -17,7 +17,7 @@
 
 
     <nav class="navbar navbar-expand-lg shadow-sm " style="background-color: rgb(223, 223, 223)">
-    <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
+    <div class="container"> <a class="navbar-brand d-flex align-items-center" href="https://bluelinelogistic.net/">
         <img src="{{ asset('assets/lte/bll.png') }}" alt="" height="50px" width="100px">
 
     </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
@@ -27,7 +27,9 @@
 
     <div class="collapse navbar-collapse" id="navbar4">
     <ul class="navbar-nav mr-auto pl-lg-4">
+    @if(Auth::check() && Auth::user()->type  == "")
     <li class="nav-item px-lg-2 active"> <a class="nav-link" href="{{ route('users.index') }}"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Users</a> </li>
+    @endif
     <li class="nav-item px-lg-2"> <a class="nav-link" href="{{ route('shipments.goodtrack') }}"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Good Tracking</a> </li>
     <li class="nav-item px-lg-2"> <a class="nav-link" href="{{ route('shipments.vault.index') }}"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></i></span>Vault Tracking</a> </li>
 

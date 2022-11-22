@@ -137,6 +137,7 @@ $pageTitle =  __('cargo::view.tracking_shipment');
                     <td class="px-3">{{$st->current_status}}</td>
                 </tr>
                 </tbody>
+            
             @endforeach
 
             </table>

@@ -145,7 +145,7 @@ class ShipmentController extends Controller
     public function vault_store(Request $request)
     {
         // dd($request->all());
-        
+
         $request->validate([
             'vault_username' => 'required',
             'vault_password' => 'required',
@@ -178,7 +178,10 @@ class ShipmentController extends Controller
         $model->despositor = $request->despositor;
 
         // $model->vault_icon = $request->vault_icon;
-        $model->quantity = $request->quantity;
+        $model->qty1 = $request->qty1;
+        $model->qty2 = $request->qty2;
+        $model->qty3 = $request->qty3;
+
 
         $model->item_des = $request->item_des;
         $model->status = $request->ship_status;
@@ -221,6 +224,7 @@ class ShipmentController extends Controller
 
     public function vault_update(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'vault_username' => 'required',
             'vault_password' => 'required',
@@ -254,8 +258,10 @@ class ShipmentController extends Controller
             $model->next_kin = $request->next_kin;
             $model->despositor = $request->despositor;
 
-            $model->quantity = $request->quantity;
 
+            $model->qty1 = $request->qty1;
+            $model->qty2 = $request->qty2;
+            $model->qty3 = $request->qty3;
             // $model->vault_icon = $request->vault_icon;
             $model->item_des = $request->item_des;
             $model->status = $request->ship_status;
@@ -298,7 +304,7 @@ class ShipmentController extends Controller
             'Shipment.branch_id'       => 'required',
             'Shipment.shipping_date'   => 'nullable',
             'Shipment.collection_time' => 'nullable',
-            
+
             'Shipment.reciver_id'       => 'required',
             // 'Shipment.vault_username'    => 'required',
             // 'Shipment.vault_password'    => 'required',

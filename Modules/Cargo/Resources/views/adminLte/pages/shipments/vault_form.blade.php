@@ -223,7 +223,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
             </div>
             @enderror
 
-            {{--  <div class="form-group client-select">               
+            {{--  <div class="form-group client-select">
               @if($user_role == $auth_client)
               <input type="text" placeholder="" class="form-control" name="" value="{{$userClient->name}}" disabled>
               <input type="hidden" name="Shipment[client_id]" value="{{$userClient->id}}">
@@ -278,7 +278,7 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
         <div class="col-md-6 py-2">
             <div class="form-group">
               <label class="col-form-label fw-bold fs-6 required">Status</label>
-                    <input type="text" value="{{ old('Shipment.ship_status', isset($model) ? $model->ship_status : '') }}" placeholder="Status" name="ship_status" id="ship_status" required class="form-control @error('Shipment.ship_status') is-invalid @enderror" />
+                <input type="text" value="{{ old('Shipment.status', isset($model) ? $model->status : '') }}" placeholder="Status" name="ship_status" id="ship_status" required class="form-control @error('Shipment.ship_status') is-invalid @enderror" />
 
               {{--  <select class="form-control select2" data-placeholder="Select Status"
                 data-allow-clear="true" data-control="select2" name="ship_status" required>
@@ -315,17 +315,21 @@ $paymentSettings = resolve(\Modules\Payments\Entities\PaymentSetting::class)->to
             </div>
           </div>
 
-          <div class="col-md-6 py-2">
-            <div class="form-group">
-              <label class="col-form-label fw-bold fs-6 required">Good Quantity</label>
-              <input type="text" value="{{ old('Shipment.quantity', isset($model) ? $model->quantity : '') }}" placeholder="Quantity" name="quantity" required class="form-control @error('Shipment.quantity') is-invalid @enderror" />
-              @error('Shipment.quantity')
+            <div class="col-md-6 form-group py-2">
+              <label class="col-form-label fw-bold fs-6 required">Quantity</label>
+                <div class="d-flex">
+                <input type="text" value="{{ old('Shipment.qty1', isset($model) ? $model->qty1 : '') }}" placeholder="Quantity" name="qty1" required class="form-control @error('Shipment.qty1') is-invalid @enderror" />
+                <input type="text" value="{{ old('Shipment.qty2', isset($model) ? $model->qty2 : '') }}" placeholder="Quantity" name="qty2" required class="form-control @error('Shipment.qty2') is-invalid @enderror mx-2" />
+                <input type="text" value="{{ old('Shipment.qty3', isset($model) ? $model->qty3 : '') }}" placeholder="Quantity" name="qty3" required class="form-control @error('Shipment.qty3') is-invalid @enderror" />
+                </div>
+
+              @error('Shipment.qty1')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>
               @enderror
             </div>
-          </div>
+
 
           <div class="col-md-6 py-2">
             <div class="form-group">

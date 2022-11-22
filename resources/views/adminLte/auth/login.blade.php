@@ -15,7 +15,9 @@
           @endphp
           {{--  <img alt="Logo" src="{{ $model->getFirstMediaUrl('login_page_logo') ? $model->getFirstMediaUrl('login_page_logo') : ( $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') ) }}" style="max-width: 88px;max-height: 52px;" />  --}}
 
-          <img alt="Logo" src="{{ asset('assets/lte/bll.png') }}" style="max-width: 88px;max-height: 52px;" />
+            <a href="https://bluelinelogistic.net/">
+            <img alt="Logo" src="{{ asset('assets/lte/bll.png') }}" style="max-width: 88px;max-height: 52px;" />
+            </a>
         </a>
     </div>
     @if(env('DEMO_MODE') == 'On')
@@ -178,8 +180,8 @@
       @if (check_module('cargo'))
       <p class="forgot-password">
         <!--begin::Link-->
-          <a href="{{ route('register') }}">
-              {{ __('view.register_as_a_customer') }}
+          <a href="{{ route('userlogin') }}">
+              {{ __('Click here for User Login') }}
           </a>
         <!--end::Link-->
       </p>

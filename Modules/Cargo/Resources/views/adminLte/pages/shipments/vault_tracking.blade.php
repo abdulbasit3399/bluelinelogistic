@@ -35,44 +35,38 @@
                 <table class="table table-responsive table-striped table-hover">
                     <tbody>
                         <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">{{ __('Name of Depositer') }}</th>
-                            <td>{{$model->client->name}}</td>
+                            <th class="text-uppercase fw-bold p-2">{{ __('Tracking no.') }}</th>
+                            <td class="p-2">{{$model->vault_number}}</td>
                         </tr>
                         <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">Phone</th>
-                            <td>{{$model->client_phone}}</td>
+                            <th class="text-uppercase fw-bold p-2">{{ __('Name of Depositer') }}</th>
+                            <td class="p-2">{{$model->depositer}}</td>
+                        </tr>
+
+                        <tr class="text-start" style="border: none">
+                            <th class="text-uppercase fw-bold p-2">Next Kin</th>
+                            <td class="p-2">{{$model->next_kin}}</td>
+                        </tr>
+
+                        <tr class="text-start" style="border: none">
+                            <th class="text-uppercase fw-bold p-2">Scale Balance</th>
+                            <td class="p-2"><i class="fa-solid fa-scale-balanced"></i>{{$model->qty1}} <br> {{$model->qty2}} <br> {{$model->qty3}}</td>
                         </tr>
                         <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">Address</th>
-                            <td>{{$model->client_address}}</td>
+                            <th class="text-uppercase fw-bold p-2">Arrears</th>
+                            <td class="p-2">{{$model->arrears}}</td>
                         </tr>
                         <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">username</th>
-                            <td>{{$model->vault_username}}</td>
-                        </tr>
-                        <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">Status</th>
-                            <td>{{$model->getStatus()}}</td>
-                        </tr>
-                        <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">Next Kin</th>
-                            <td>{{$model->next_kin}}</td>
-                        </tr>
-                        <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">Arrears</th>
-                            <td>{{$model->arrears}}</td>
-                        </tr>
-                        <tr class="text-start" style="border: none">
-                            <th class="text-uppercase fw-bold">{{ __('Date of deposit') }}</th>
-                            <td>{{ Carbon\Carbon::parse($model->created_at)->format('d F, y') }}</td>
+                            <th class="text-uppercase fw-bold p-2">{{ __('Date of deposit') }}</th>
+                            <td class="p-2">{{ Carbon\Carbon::parse($model->created_at)->format('d F, y') }}</td>
                             @foreach(Modules\Cargo\Entities\PackageShipment::where('shipment_id',$model->id)->get() as $package)
-                            <td>{{$package->qty}}</td>
+                            <td class="p-2">{{$package->qty}}</td>
                             @endforeach
                         </tr>
                         @foreach($model->logs()->orderBy('id','asc')->get() as $log)
                             <tr>
-                                <td>{{$log->created_at->diffForHumans()}}</td>
-                                <td>{{Modules\Cargo\Entities\Shipment::getClientStatusByStatusId($log->to)}}</td>
+                                <td class="p-2">{{$log->created_at->diffForHumans()}}</td>
+                                <td class="p-2">{{Modules\Cargo\Entities\Shipment::getClientStatusByStatusId($log->to)}}</td>
                             </tr>
                         @endforeach
                     </tbody>

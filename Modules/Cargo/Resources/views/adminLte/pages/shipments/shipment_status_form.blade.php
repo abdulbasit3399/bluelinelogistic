@@ -87,7 +87,9 @@
         </div>
         <div class="col-md-2">
           <label class="col-form-label fw-bold fs-6 ">Shipment Status</label>
-          <select class="form-control" name="ship_status" >
+          <input type="text" value="{{ old('Shipment.current_status', isset($pack) ? $pack->current_status : '') }}" placeholder="Status" name="ship_status" id="current_status" required class="form-control @error('Shipment.current_status') is-invalid @enderror" />
+
+          {{--  <select class="form-control" name="ship_status" >
             <option value="Saved Pickup" {{$pack->current_status == 'Saved Pickup' ? 'selected' :''}}>Saved Pickup</option>
             <option value="Saved Dropoff" {{$pack->current_status == 'Saved Dropoff' ? 'selected' :''}}>Saved Dropoff</option>
             <option value="Requested Pickup" {{$pack->current_status == 'Requested Pickup' ? 'selected' :''}}>Requested Pickup</option>
@@ -101,7 +103,7 @@
             <option value="Returned" {{$pack->current_status == 'Returned' ? 'selected' :''}}>Returned</option>
             <option value="On Hold" {{$pack->current_status == 'On Hold' ? 'selected' :''}}>On Hold</option>
             <option value="In Vault" {{$pack->current_status == 'In Vault' ? 'selected' :''}}>In Vault</option>
-          </select>
+          </select>  --}}
         </div>
         <div class="col-md-2">
           <div>
